@@ -3,30 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigea | Web App & Tech Blog</title>
+    <title>Sigea | Threat Informed Detection Engineering</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 2rem; }
-        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
-        .card { border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
-        .btn { background: #24292e; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; }
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --primary-accent: #58a6ff; /* Sigea Cyan */
+            --text-main: #c9d1d9;
+            --text-dim: #8b949e;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            max-width: 1000px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.3));
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--primary-accent);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .description {
+            max-width: 700px;
+            margin: 1.5rem auto;
+            color: var(--text-dim);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .product-hero {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--primary-accent);
+        }
+
+        .badge {
+            background: rgba(88, 166, 255, 0.1);
+            color: var(--primary-accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .terminal-box {
+            background: #010409;
+            padding: 1.5rem;
+            border-radius: 6px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .terminal-box::after {
+            content: "Copy";
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            cursor: pointer;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-accent);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-accent);
+            color: #0d1117;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            width: 100%;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Sigea</h1>
-    <p>Developing tools for Detection Engineering, cyber Threat Intelligence using DevSecOps.</p>
 
-    <div class="card">
-        <h2>TIDE</h2>
-        <p>Get started with our latest build via Docker:</p>
-        <code>docker pull 047741/tide-core:latest</code>
-        <br><br>
-        <a href="https://github.com/sigeauk/tide" class="btn">View on GitHub</a>
+<header>
+    <img src="sigea.png" alt="Sigea Logo" class="logo">
+    <h1>SIGEA</h1>
+    <div class="tagline">Threat Informed Detection Engineering</div>
+    <p class="description">
+        Sigea provides cutting-edge open-source tooling for modern security operations, 
+        specializing in automated detection lifecycles and threat-aligned defense.
+    </p>
+</header>
+
+<div class="container">
+    <div class="product-hero">
+        <span class="badge">Flagship App</span>
+        <h2>Introducing TIDE</h2>
+        <p>A standalone, platform-agnostic engine for managing detection rules, 
+           analyzing threat production, and automating security workflows.</p>
+        
+        <div class="terminal-box">
+            <span style="color: #7ee787;">$</span> docker pull sigeauk/tide:latest
+        </div>
+
+        <a href="https://github.com/sigeauk/TIDE" class="btn">View on GitHub</a>
     </div>
 
-    <h2>Tech Blog</h2>
-    <ul>
-        <li><strong>Coming Soon:</strong> Deploying Scalable Web Apps with Docker.</li>
-        <li><strong>Coming Soon:</strong> Lessons learned building the Sigea backend.</li>
-    </ul>
+    <div class="grid">
+        <div class="feature-card">
+            <h3>Sigma Mapping</h3>
+            <p>Native support for Sigma rules with automated translation to backend-specific queries.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Threat-Informed</h3>
+            <p>Direct integration with MITRE ATT&CK® to visualize coverage and identify defensive gaps.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Persistent Data</h3>
+            <p>Robust backend storage ensuring your detection history and metadata remain secure and portable.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Sigea. Powered by GitHub Pages.</p>
+</footer>
+
 </body>
 </html>
