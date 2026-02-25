@@ -30,7 +30,7 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
     <h3>1. Environment Variables</h3>
     <p>Configure your connection to Elastic SIEM and optional services like Keycloak or OpenCTI.</p>
     <span class="filename">.env</span>
-    <pre>```yaml
+{% highlight yaml %}
 TIDE_VERSION=2.4.0
 APP_URL=https://tide.yourdomain.com
 
@@ -43,12 +43,12 @@ ELASTIC_API_KEY="your-secret-api-key"
 AUTH_DISABLED=false
 OPENCTI_URL="http://opencti:8080"
 GITLAB_URL="http://gitlab:8929"
-```</pre>
+{% endhighlight %}
 
     <h3>2. Docker Orchestration</h3>
     <p>TIDE runs as a multi-container stack. The app container persists its state in the <code>./data</code> volume.</p>
     <span class="filename">docker-compose.yml</span>
-    <pre>```yaml
+{% highlight yaml %}
 services:
   tide-app:
     image: 047741/tide-core:${TIDE_VERSION}
@@ -79,7 +79,7 @@ services:
 networks:
   tide-network:
     driver: bridge
-```</pre>
+{% endhighlight %}
 
     <h3>3. Launch</h3>
     <p>Start the production stack with a single command:</p>
