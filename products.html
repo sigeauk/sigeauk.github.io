@@ -3,210 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sigea.uk/">
+    <meta property="og:url" content="https://sigea.uk/products.html">
     <meta property="og:title" content="TIDE | Threat Informed Detection Engineering">
-    <meta property="og:description" content="Modern tooling for detection lifecycles and threat-aligned defense via TIDE.">
+    <meta property="og:description" content="Deploy TIDE: The standalone platform for managing detection rules and validating coverage.">
     <meta property="og:image" content="https://sigea.uk/sigea.png">
+    
     <link rel="icon" type="image/png" href="sigea.png">
-    <title>TIDE | Threat Informed Detection Engineering</title>
-    <nav style="margin-top: 2rem;">
-        <a href="about.html" style="color: var(--primary-accent); margin: 0 15px; text-decoration: none; font-weight: bold;">About Sigea</a>
-        <a href="products.html" style="color: var(--primary-accent); margin: 0 15px; text-decoration: none; font-weight: bold;">Our Products</a>
-    </nav>
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --primary-accent: #58a6ff;
-            --text-main: #c9d1d9;
-            --text-dim: #8b949e;
-            --border-color: #30363d;
-        }
+    <link rel="stylesheet" href="style.css">
+    <title>TIDE | Enterprise Deployment Guide</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            width: 100%;
-            max-width: 1000px;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 1.5rem;
-            filter: drop-shadow(0 0 10px rgba(88, 166, 255, 0.3));
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #ffffff;
-            letter-spacing: -1px;
-        }
-
-        .tagline {
-            font-size: 1.25rem;
-            color: var(--primary-accent);
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
-
-        .description {
-            max-width: 700px;
-            margin: 1.5rem auto;
-            color: var(--text-dim);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1000px;
-        }
-
-        .product-hero {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-hero::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: var(--primary-accent);
-        }
-
-        .badge {
-            background: rgba(88, 166, 255, 0.1);
-            color: var(--primary-accent);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .terminal-box {
-            background: #010409;
-            padding: 1.5rem;
-            border-radius: 6px;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-            font-size: 0.9rem;
-            border: 1px solid var(--border-color);
-            margin: 1.5rem 0;
-            position: relative;
-        }
-
-        .terminal-box::after {
-            content: "Copy";
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            cursor: pointer;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .feature-card {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-        }
-
-        .feature-card:hover {
-            border-color: var(--primary-accent);
-        }
-
-        .feature-card h3 {
-            margin-top: 0;
-            color: #fff;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--primary-accent);
-            color: #0d1117;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            padding: 4rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            width: 100%;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
 
+<header>
+    <a href="index.html" class="header-left">
+        <img src="sigea.png" alt="Sigea Logo" class="logo">
+        <h1>SIGEA</h1>
+    </a>
+    <nav>
+        <a href="products.html" style="color: var(--primary-accent);">Products</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
 
-<div class="container">
-    <div class="product-hero">
-        <span class="badge">Threat Informed Detection Engine</span>
-        <h2>Introducing TIDE</h2>
-        <p>A standalone, platform-agnostic engine for managing detection rules, 
-           analyzing threat production, and automating security workflows.</p>
-        
-        <div class="terminal-box">
-            <span style="color: #7ee787;">$</span> docker pull 047741/tide-core:latest
-        </div>
-
-        <a href="https://github.com/sigeauk/TIDE" class="btn">View on GitHub</a>
+<div class="content-section">
+    <div class="hero-mini">
+        <h2 style="border: none; font-size: 2.5rem; margin-bottom: 0.5rem;">TIDE</h2>
+        <p style="color: var(--primary-accent); font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Threat Informed Detection Engineering</p>
+        <p>A standalone, containerized platform for managing the full Detection Engineering lifecycle—from threat intelligence to validated SIEM rules.</p>
     </div>
 
-    <div class="grid">
-        <div class="feature-card">
-            <h3>Sigma Mapping</h3>
-            <p>Native support for Sigma rules with automated translation to backend-specific queries.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Threat-Informed</h3>
-            <p>Direct integration with MITRE ATT&CK® to visualize coverage and identify defensive gaps.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Persistent Data</h3>
-            <p>Robust backend storage ensuring your detection history and metadata remain secure and portable.</p>
-        </div>
+    <h2>Architecture Overview</h2>
+    <p>TIDE utilizes a robust, three-tier architecture designed for air-gapped or enterprise environments:</p>
+    <ul>
+        <li><strong>Nginx:</strong> Handles SSL termination and reverse proxying.</li>
+        <li><strong>FastAPI:</strong> Powers the core REST API and HTMX dynamic frontend.</li>
+        <li><strong>DuckDB:</strong> Embedded analytics database for high-performance rule caching.</li>
+    </ul>
+
+    
+
+    <h2>Deployment Guide</h2>
+    
+    <div class="step-box">
+        <strong>Prerequisites:</strong> Docker & Docker Compose v2+ installed. API access to your Elastic Security (Kibana) instance.
+    </div>
+
+    <h3>1. Environment Variables</h3>
+    <p>Configure your connection to Elastic SIEM and optional services like Keycloak or OpenCTI.</p>
+    <span class="filename">.env</span>
+    <pre><code>TIDE_VERSION=2.4.0
+APP_URL=https://tide.yourdomain.com
+
+# Elastic Security Configuration
+ELASTIC_URL="http://kibana:5601"
+ELASTICSEARCH_URL="http://elasticsearch:9200"
+ELASTIC_API_KEY="your-secret-api-key"
+
+# Optional Integrations
+AUTH_DISABLED=false
+OPENCTI_URL="http://opencti:8080"
+GITLAB_URL="http://gitlab:8929"</code></pre>
+
+    <h3>2. Docker Orchestration</h3>
+    <p>TIDE runs as a multi-container stack. The app container persists its state in the <code>./data</code> volume.</p>
+    <span class="filename">docker-compose.yml</span>
+    <pre><code>version: '3.8'
+services:
+  tide-app:
+    image: 047741/tide-core:${TIDE_VERSION}
+    container_name: tide-app
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    expose:
+      - "8000"
+    networks:
+      - tide-network
+    restart: unless-stopped
+
+  tide-nginx:
+    image: nginx:alpine
+    container_name: tide-nginx
+    ports:
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs/server.crt:/etc/nginx/certs/server.crt:ro
+    networks:
+      - tide-network
+    depends_on:
+      tide-app:
+        condition: service_healthy
+
+networks:
+  tide-network:
+    driver: bridge</code></pre>
+
+    <h3>3. Launch</h3>
+    <p>Start the production stack with a single command:</p>
+    <pre><code>docker compose up -d</code></pre>
+
+    <h2>Data Persistence</h2>
+    <p>TIDE is designed for stability. The following files are maintained in your persistent volume to survive container updates:</p>
+    <ul>
+        <li><code>tide.duckdb</code>: The central rule cache and coverage metrics.</li>
+        <li><code>checkedRule.json</code>: Manual analyst validation records.</li>
+        <li><code>triggers/</code>: Directory for background synchronization state.</li>
+    </ul>
+
+    <div style="text-align: center; margin-top: 4rem;">
+        <a href="https://github.com/sigeauk/TIDE" style="background: var(--primary-accent); color: #0d1117; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Full Documentation on GitHub</a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Sigea</p>
+    <p>&copy; 2026 Sigea. Powered by GitHub Pages.</p>
 </footer>
 
 </body>
