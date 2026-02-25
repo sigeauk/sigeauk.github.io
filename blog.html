@@ -21,7 +21,13 @@ title: Blog
                     {{ post.title }}
                 </a>
             </h3>
-            <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+            <p>
+            {% if post.description %}
+                {{ post.description }}
+            {% else %}
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+            {% endif %}
+            </p>
             <a href="{{ post.url | relative_url }}" style="color: var(--primary-accent); font-weight: bold; text-decoration: none;">
                 Read Article →
             </a>
