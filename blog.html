@@ -1,15 +1,16 @@
 ---
 layout: default
 title: Blog
-description: Stay updated with Sigea's latest research, insights, and updates on Threat Informed Detection Engineering.
 ---
 <div class="content-section">
     <div class="hero-mini" style="text-align: center; margin-bottom: 3rem;">
-        <h2 style="border: none; font-size: 2.5rem; margin-bottom: 0;">Technical Blog</h2>
-        <p style="color: var(--primary-accent); font-weight: bold; text-transform: uppercase;">Detection Research & TIDE Updates</p>
+        <h2>Technical Blog</h2>
+        <p style="color: var(--primary-accent); text-transform: uppercase;">Detection Research & TIDE Updates</p>
     </div>
 
     <div class="blog-feed">
+      <p style="color: var(--text-dim); font-size: 0.8rem;">Total Posts Found: {{ site.posts | size }}</p>
+
       {% for post in site.posts %}
         <article class="step-box" style="margin-bottom: 2rem;">
             <span style="font-size: 0.8rem; color: var(--text-dim);">
@@ -21,12 +22,10 @@ description: Stay updated with Sigea's latest research, insights, and updates on
                 </a>
             </h3>
             <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            <a href="{{ post.url | relative_url }}" style="color: var(--primary-accent); font-size: 0.9rem; font-weight: bold; text-decoration: none;">
+            <a href="{{ post.url | relative_url }}" style="color: var(--primary-accent); font-weight: bold; text-decoration: none;">
                 Read Article →
             </a>
         </article>
-      {% empty %}
-        <p style="text-align: center; color: var(--text-dim); padding: 3rem;">No posts found yet. Check back soon!</p>
       {% endfor %}
     </div>
 </div>
