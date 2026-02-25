@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Introducing TIDE: Threat Informed Detection Engineering"
-date: 2026-02-25
+date: 2026-02-24
 ---
 
 # Introducing TIDE: Threat Informed Detection Engineering
