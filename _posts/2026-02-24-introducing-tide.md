@@ -2,6 +2,7 @@
 layout: default
 title: "Introducing TIDE: Threat Informed Detection Engineering"
 date: 2026-02-24
+description: How and why TIDE was developed.
 ---
 
 # Introducing TIDE: Threat Informed Detection Engineering

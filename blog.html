@@ -5,11 +5,11 @@ title: Blog
 <div class="content-section">
     <div class="hero-mini" style="text-align: center; margin-bottom: 3rem;">
         <h2>Technical Blog</h2>
-        <p style="color: var(--primary-accent); text-transform: uppercase;">Detection Research & TIDE Updates</p>
+        <p style="color: var(--primary-accent); text-transform: uppercase;">Detection Engineering and Threat Intelligence Updates</p>
     </div>
 
     <div class="blog-feed">
-      <p style="color: var(--text-dim); font-size: 0.8rem;">Total Posts Found: {{ site.posts | size }}</p>
+      <p style="color: var(--text-dim); font-size: 0.8rem;">Total Posts: {{ site.posts | size }}</p>
 
       {% for post in site.posts %}
         <article class="step-box" style="margin-bottom: 2rem;">
