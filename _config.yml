@@ -1,6 +1,21 @@
 title: Sigea
-email: your-email@sigea.uk
-description: >- 
-  Threat Informed Detection Engineering.
+description: Threat Informed Detection Engineering
+url: "https://sigea.uk"
 baseurl: ""
-url: "https://sigea.uk" 
+
+# Tells Jekyll to look for posts in the _posts folder
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title:output_ext
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude these from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
