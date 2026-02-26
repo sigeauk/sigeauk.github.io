@@ -47,9 +47,9 @@ Using **STIX 2.1** parsing logic, TIDE ingests "Intrusion Sets" (Threat Actors) 
 
 This is where TIDE truly shines. It creates a real-time intersection between your **Defensive Posture** and the **Offensive Landscape**. In the Coverage Matrix, TIDE visualizes this intersection using a heatmap:
 
-* <span style="color: #4ade80; font-weight: bold;">Green (Covered):</span> Techniques used by the actor for which you have active, healthy rules.
-* <span style="color: #f87171; font-weight: bold;">Red (Critical Gap):</span> Techniques the actor uses for which you have zero current visibility.
-* <span style="color: #60a5fa; font-weight: bold;">Blue (Defense in Depth):</span> Active rules you have that are not currently utilized by the selected actor.
+* <span class="coverage-green">Green (Covered):</span> Techniques used by the actor for which you have active, healthy rules.
+* <span class="coverage-red">Red (Critical Gap):</span> Techniques the actor uses for which you have zero current visibility.
+* <span class="coverage-blue">Blue (Defense in Depth):</span> Active rules you have that are not currently utilized by the selected actor.
 
 ---
 

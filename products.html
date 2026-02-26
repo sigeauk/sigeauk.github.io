@@ -30,7 +30,8 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
     <p>Configure your connection to Elastic SIEM and optional services like Keycloak or OpenCTI.</p>
     
     <span class="filename">.env</span>
-    <pre><code>TIDE_VERSION=2.4.0
+{% highlight bash %}
+TIDE_VERSION=2.4.0
 APP_URL=https://tide.yourdomain.com
 
 # Elastic Security Configuration
@@ -41,13 +42,15 @@ ELASTIC_API_KEY="your-secret-api-key"
 # Optional Integrations
 AUTH_DISABLED=false
 OPENCTI_URL="http://opencti:8080"
-GITLAB_URL="http://gitlab:8929"</code></pre>
+GITLAB_URL="http://gitlab:8929"
+{% endhighlight %}
 
     <h3>2. Docker Orchestration</h3>
     <p>TIDE runs as a multi-container stack. The app container persists its state in the <code>./data</code> volume.</p>
     
     <span class="filename">docker-compose.yml</span>
-    <pre><code>services:
+{% highlight yaml %}
+services:
   tide-app:
     image: 047741/tide-core:${TIDE_VERSION}
     container_name: tide-app
@@ -76,11 +79,14 @@ GITLAB_URL="http://gitlab:8929"</code></pre>
 
 networks:
   tide-network:
-    driver: bridge</code></pre>
+    driver: bridge
+{% endhighlight %}
 
     <h3>3. Launch</h3>
     <p>Start the production stack with a single command:</p>
-    <pre><code>docker compose up -d</code></pre>
+{% highlight bash %}
+docker compose up -d
+{% endhighlight %}
 
     <h2>Data Persistence</h2>
     <p>TIDE is designed for stability. The following files are maintained in your persistent volume to survive container updates:</p>
