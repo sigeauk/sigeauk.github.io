@@ -1,129 +1,114 @@
 :root {
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --primary-accent: #58a6ff;
-            --text-main: #c9d1d9;
-            --text-dim: #8b949e;
-            --border-color: #30363d;
-            --code-bg: #010409;
-        }
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --primary-accent: #58a6ff;
+    --text-main: #c9d1d9;
+    --text-dim: #8b949e;
+    --border-color: #30363d;
+    --code-bg: #010409;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        header {
-            width: 100%;
-            /* Use your variable for background */
-            background-color: var(--bg-color); 
-            padding: 1.5rem 2rem 1rem 2rem;
-            display: flex;
-            flex-direction: column; /* Stacks top row and nav row */
-            align-items: flex-start; /* Aligns everything to the left like the pic */
-            box-sizing: border-box;
-        }
-        .header-top {
-            margin-bottom: 1.5rem; /* Space between Title and Nav */
-        }
+/* --- HEADER STYLES (Guarded Glass Layout) --- */
 
-        .header-left {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+.site-header {
+    width: 100%;
+    background-color: var(--bg-color); /* Full width background color */
+    display: flex;
+    justify-content: center; /* Centers the inner container */
+    padding: 2rem 0;
+}
 
-        .logo {
-            width: 32px; /* Adjusted slightly to match reference scale */
-            height: 32px;
-            margin-right: 15px;
-        }
+.header-container {
+    width: 100%;
+    max-width: 1200px; /* Limits width to align with your content */
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column; /* Stacks Brand above Nav */
+    align-items: flex-start; /* Aligns everything to the left */
+}
 
-        h1 {
-            font-size: 1.4rem;
-            margin: 0;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            text-transform: none; /* Reference pic uses Title Case, not Uppercase */
-            font-weight: 600;
-        }
+.brand-box {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 2.5rem; /* Space between Title and Nav */
+}
 
-        nav {
-            display: flex;
-            gap: 30px; /* Consistent spacing between links */
-        }
+.logo {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+}
 
-        nav a {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 400;
-            font-size: 0.95rem;
-            transition: opacity 0.2s;
-        }
+.site-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
 
-        nav a:hover {
-            color: #ffffff;
-        }
+.site-nav {
+    display: flex;
+    gap: 35px; /* Spacing between the links */
+}
 
-        .content-section {
-            padding: 3rem 2rem;
-            max-width: 900px;
-            width: 100%;
-            box-sizing: border-box;
-        }
+.site-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
 
-        .hero-mini { text-align: center; margin-bottom: 4rem; }
+.site-nav a:hover {
+    color: #ffffff;
+}
 
-        h2 {
-            color: #fff;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-top: 3rem;
-        }
+/* --- CONTENT SECTIONS --- */
 
-        h3 { color: var(--primary-accent); margin-top: 2rem; }
+.content-section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-        pre {
-            background: var(--code-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-            font-size: 0.85rem;
-            overflow-x: auto;
-            margin: 1rem 0 2rem 0;
-            color: #d1d5da;
-            line-height: 1.5;
-        }
+h2 {
+    color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+}
 
-        .filename {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            margin-bottom: -0.5rem;
-            display: block;
-            margin-left: 0.5rem;
-            font-family: monospace;
-        }
+pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-family: "SFMono-Regular", monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    margin: 1rem 0 2rem 0;
+    color: #d1d5da;
+}
 
-        .step-box {
-            background: var(--card-bg);
-            padding: 1.25rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-accent);
-            margin: 1.5rem 0;
-        }
-
-        footer {
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            width: 100%;
-            color: var(--text-dim);
-            font-size: 0.85rem;
-        }
+footer {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
