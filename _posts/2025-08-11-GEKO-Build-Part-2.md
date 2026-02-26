@@ -2,7 +2,7 @@
 layout: default
 title: "GEKO: Build Part 2"
 date: 2025-08-11
-description: ""
+description: "Building GEKO - the G"
 ---
 
 # GEKO: Build Part 2
