@@ -23,7 +23,7 @@ body {
 
 .site-header {
     width: 100%;
-    background-color: var(--bg-color); /* Full width background color */
+    background-color: var(--primary-accent); /* Full width background color */
     display: flex;
     justify-content: center; /* Centers the inner container */
     padding: 2rem 0;
