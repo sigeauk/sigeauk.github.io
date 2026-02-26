@@ -14,54 +14,55 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* --- HEADER STYLES (Guarded Glass Layout) --- */
-
+/* --- FULL WIDTH HEADER --- */
 .site-header {
     width: 100%;
-    background-color: var(--primary-accent); /* Full width background color */
-    display: flex;
-    justify-content: center; /* Centers the inner container */
+    background-color: var(--primary-accent); /* The background color you wanted */
     padding: 2rem 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .header-container {
     width: 100%;
-    max-width: 1200px; /* Limits width to align with your content */
-    padding: 0 2rem;
+    max-width: 1200px;
+    padding: 0 4rem; /* Aligns the left margin */
     display: flex;
-    flex-direction: column; /* Stacks Brand above Nav */
-    align-items: flex-start; /* Aligns everything to the left */
+    flex-direction: column; /* Brand on top, Nav on bottom */
+    align-items: flex-start;
 }
 
+/* Logo next to SIGEA */
 .brand-box {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-bottom: 2.5rem; /* Space between Title and Nav */
+    margin-bottom: 2rem;
+    border: none !important; /* Removes any accidental lines */
 }
 
 .logo {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-right: 15px;
 }
 
 .site-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin: 0;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
+    border: none !important; /* Removes the purple line */
+    text-decoration: none;
 }
 
+/* Navigation Links */
 .site-nav {
     display: flex;
-    gap: 35px; /* Spacing between the links */
+    gap: 30px;
 }
 
 .site-nav a {
@@ -69,39 +70,21 @@ body {
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
 }
 
 .site-nav a:hover {
     color: #ffffff;
+    text-decoration: none;
 }
 
-/* --- CONTENT SECTIONS --- */
-
+/* --- MAIN CONTENT AREA --- */
 .content-section {
-    padding: 3rem 2rem;
-    max-width: 900px;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-}
-
-h2 {
-    color: #fff;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-top: 3rem;
-}
-
-pre {
-    background: var(--code-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1.5rem;
-    font-family: "SFMono-Regular", monospace;
-    font-size: 0.85rem;
-    overflow-x: auto;
-    margin: 1rem 0 2rem 0;
-    color: #d1d5da;
 }
 
 footer {
