@@ -1,25 +1,24 @@
 ---
 layout: default
 title: Products
-description: Explore Sigea's flagship product, TIDE—a comprehensive platform for Threat Informed
+description: Explore Sigea's flagship product, TIDE—a comprehensive platform for Threat Informed Detection Engineering.
 ---
 
-<div class="content-section">
-    <div class="hero-mini">
-        <h2 style="border: none; font-size: 2.5rem; margin-bottom: 0.5rem;">TIDE</h2>
-        <p style="color: var(--primary-accent); font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">Threat Informed Detection Engineering</p>
-        <p>A standalone, containerized platform for managing the full Detection Engineering lifecycle—from threat intelligence to validated SIEM rules.</p>
-    </div>
+<div class="hero-mini">
+    <h2 class="main-heading">TIDE</h2>
+    <p class="accent-subtitle">Threat Informed Detection Engineering</p>
+    <p class="lead-text">A standalone, containerized platform for managing the full Detection Engineering lifecycle—from threat intelligence to validated SIEM rules.</p>
+</div>
 
+<section class="product-info">
     <h2>Architecture Overview</h2>
     <p>TIDE utilizes a robust, three-tier architecture designed for air-gapped or enterprise environments:</p>
+    
     <ul>
         <li><strong>Nginx:</strong> Handles SSL termination and reverse proxying.</li>
         <li><strong>FastAPI:</strong> Powers the core REST API and HTMX dynamic frontend.</li>
         <li><strong>DuckDB:</strong> Embedded analytics database for high-performance rule caching.</li>
     </ul>
-
-    
 
     <h2>Deployment Guide</h2>
     
@@ -29,9 +28,9 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
 
     <h3>1. Environment Variables</h3>
     <p>Configure your connection to Elastic SIEM and optional services like Keycloak or OpenCTI.</p>
+    
     <span class="filename">.env</span>
-    <pre><code>
-TIDE_VERSION=2.4.0
+    <pre><code>TIDE_VERSION=2.4.0
 APP_URL=https://tide.yourdomain.com
 
 # Elastic Security Configuration
@@ -42,14 +41,13 @@ ELASTIC_API_KEY="your-secret-api-key"
 # Optional Integrations
 AUTH_DISABLED=false
 OPENCTI_URL="http://opencti:8080"
-GITLAB_URL="http://gitlab:8929"
-</code></pre>
+GITLAB_URL="http://gitlab:8929"</code></pre>
 
     <h3>2. Docker Orchestration</h3>
     <p>TIDE runs as a multi-container stack. The app container persists its state in the <code>./data</code> volume.</p>
+    
     <span class="filename">docker-compose.yml</span>
-<pre><code>
-services:
+    <pre><code>services:
   tide-app:
     image: 047741/tide-core:${TIDE_VERSION}
     container_name: tide-app
@@ -78,8 +76,7 @@ services:
 
 networks:
   tide-network:
-    driver: bridge
-</code></pre>
+    driver: bridge</code></pre>
 
     <h3>3. Launch</h3>
     <p>Start the production stack with a single command:</p>
@@ -93,7 +90,7 @@ networks:
         <li><code>triggers/</code>: Directory for background synchronization state.</li>
     </ul>
 
-    <div style="text-align: center; margin-top: 4rem;">
-        <a href="https://github.com/sigeauk/TIDE" style="background: var(--primary-accent); color: #0d1117; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600;">Full Documentation on GitHub</a>
+    <div class="cta-container">
+        <a href="https://github.com/sigeauk/TIDE" class="btn-primary">Full Documentation on GitHub</a>
     </div>
-</div>
+</section>
