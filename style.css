@@ -55,7 +55,7 @@ body {
 .site-title {
     font-size: 1.8rem;
     margin: 0;
-    color: #ffffff;
+    color: var(--text-main);
     font-weight: 700;
     border: none !important;
     text-decoration: none;
@@ -68,7 +68,7 @@ body {
 }
 
 .site-nav a {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -76,8 +76,7 @@ body {
 }
 
 .site-nav a:hover {
-    color: #ffffff;
-    text-decoration: underline;
+    color: var(--primary-accent);
 }
 
 /* --- MAIN CONTENT & RESTORED CLASSES --- */
@@ -95,7 +94,7 @@ body {
 }
 
 h2 {
-    color: #fff;
+    color: var(--text-main);
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
     margin-top: 3rem;
@@ -115,7 +114,7 @@ pre {
     font-size: 0.85rem;
     overflow-x: auto;
     margin: 1rem 0 2rem 0;
-    color: #d1d5da;
+    color: var(--text-main);
     line-height: 1.5;
 }
 
