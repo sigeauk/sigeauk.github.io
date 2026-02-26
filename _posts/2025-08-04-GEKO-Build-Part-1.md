@@ -2,10 +2,10 @@
 layout: default
 title: "GEKO: Build Part 1"
 date: 2025-08-04
-description: "Building GEKO - the GEK"
+description: "Building GEKO - the EK"
 ---
 
-# GEKO: Build Part 1
+# <span class="highlight">GEKO: Build Part 1</span>
 
 ### Intro: Why GEKO?
 
