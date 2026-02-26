@@ -245,6 +245,10 @@ pre {
     margin-bottom: 1rem;
 }
 
+.text-accent {
+    color: var(--primary-accent);
+}
+
 /* --- SYNTAX HIGHLIGHTING (Rouge - Dark Theme) --- */
 span.highlight {
     color: var(--primary-accent);

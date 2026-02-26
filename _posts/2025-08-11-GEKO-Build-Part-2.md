@@ -7,7 +7,7 @@ description: "Building GEKO - the G"
 
 # GEKO: Build Part 2
 
-### Intro: Why GEKO?
+### <span class="highlight">Intro: Why GEKO?</span>
 
 Maybe I should answer what is GEKO first... G = Gitlab, E = Elasticsearch, K =Kibana O = OpenCTI
 What if your Gitlab repositories could do more than just host your detection rules.

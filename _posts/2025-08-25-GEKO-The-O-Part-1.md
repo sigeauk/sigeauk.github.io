@@ -5,7 +5,7 @@ date: 2025-08-25
 description: "STIX and Threat intell"
 ---
 
-# GEKO: The 'O': Part 1
+# <span class="highlight">GEKO: The 'O': Part 1</span>
 
 ### STIX and Cyber Spies
 

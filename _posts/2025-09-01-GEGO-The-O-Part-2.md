@@ -5,7 +5,7 @@ date: 2025-09-01
 description: "MITRE ATT&CK and TTPs"
 ---
 
-# GEKO: The 'O': Part 2
+# <span class="highlight">GEKO: The 'O': Part 2</span>
 
 ### MITRE Mayhem and the TTP Treasure Hunt
 

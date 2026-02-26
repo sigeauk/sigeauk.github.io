@@ -5,7 +5,7 @@ date: 2025-09-08
 description: "Detection Rules and Courses of Action"
 ---
 
-# GEKO: The 'O': Part 3
+# <span class="highlight">GEKO: The 'O': Part 3</span>
 
 ### Elastic Rules and the COA Conundrum
 
