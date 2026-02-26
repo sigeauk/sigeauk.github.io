@@ -1,7 +1,7 @@
 :root {
     --bg-color: #0d1117;
     --card-bg: #161b22;
-    --primary-accent: #58a6ff;
+    --primary-accent: #58a6ff; /* This is the blue color */
     --text-main: #c9d1d9;
     --text-dim: #8b949e;
     --border-color: #30363d;
@@ -16,11 +16,11 @@ body {
     margin: 0;
 }
 
-/* --- FULL WIDTH HEADER --- */
+/* --- THE ACCENT HEADER --- */
 .site-header {
     width: 100%;
-    background-color: var(--primary-accent); /* The background color you wanted */
-    padding: 2rem 0;
+    background-color: var(--primary-accent); /* Header is now Blue */
+    padding: 1.5rem 0; /* Reduced padding to fix the massive gap */
     display: flex;
     justify-content: flex-start;
 }
@@ -28,59 +28,57 @@ body {
 .header-container {
     width: 100%;
     max-width: 1200px;
-    padding: 0 4rem; /* Aligns the left margin */
+    padding: 0 4rem;
     display: flex;
-    flex-direction: column; /* Brand on top, Nav on bottom */
+    flex-direction: column;
     align-items: flex-start;
 }
 
-/* Logo next to SIGEA */
 .brand-box {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-bottom: 2rem;
-    border: none !important; /* Removes any accidental lines */
+    margin-bottom: 1rem; /* Tightened space between SIGEA and Nav */
+    border: none !important;
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+    margin-right: 12px;
 }
 
 .site-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin: 0;
-    color: #ffffff;
+    color: #ffffff; /* White text looks best on the blue bg */
     font-weight: 700;
-    letter-spacing: 0.5px;
-    border: none !important; /* Removes the purple line */
+    border: none !important;
     text-decoration: none;
+    line-height: 1; /* Removes extra vertical space from font-box */
 }
 
-/* Navigation Links */
 .site-nav {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .site-nav a {
-    color: var(--text-main);
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for nav links */
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
 .site-nav a:hover {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-/* --- MAIN CONTENT AREA --- */
+/* --- MAIN CONTENT --- */
 .content-section {
-    padding: 4rem 2rem;
+    padding: 2rem; /* Reduced top padding to move content up */
     max-width: 1000px;
     margin: 0 auto;
     width: 100%;
@@ -88,10 +86,9 @@ body {
 }
 
 footer {
-    padding: 3rem 2rem;
+    padding: 2rem;
     text-align: center;
     border-top: 1px solid var(--border-color);
     width: 100%;
     color: var(--text-dim);
-    font-size: 0.85rem;
 }
