@@ -371,6 +371,7 @@ code {
 footer {
     padding: 3rem 0;
     border-top: 1px solid var(--border-color);
+    text-align: center;
 }
 
 footer p {
