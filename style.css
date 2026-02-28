@@ -255,6 +255,41 @@ pre {
     color: var(--primary-accent);
 }
 
+/* --- GALLERY (Product page) --- */
+/* Gallery Styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.05); /* Matches your dark theme */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #888;
+}
+
 /* --- SYNTAX HIGHLIGHTING (Rouge - Dark Theme) --- */
 span.highlight {
     color: var(--primary-accent);
