@@ -183,6 +183,35 @@ pre {
     margin-bottom: 3rem;
 }
 
+.hero-container {
+    display: flex;
+    align-items: center; /* Centers logo vertically with the text */
+    gap: 40px;           /* Space between logo and text */
+    margin-bottom: 3rem;
+    max-width: 1100px;
+}
+
+.hero-logo img {
+    width: 280px;
+    height: auto;
+}
+
+.hero-text {
+    flex: 1;             /* Allows text to take up remaining space */
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-logo img {
+        width: 150px;    /* Smaller logo on mobile */
+    }
+}
+
 .main-subtext {
     color: var(--text-dim);
     font-size: 1.1rem;
