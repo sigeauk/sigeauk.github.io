@@ -129,6 +129,7 @@ body {
     padding: 1.5rem;
     border-radius: 12px;
     border-left: 4px solid var(--primary-accent);
+    border-bottom: 4px solid var(--primary-accent);
 }
 
 /* --- BLOG & PRODUCT SPECIFICS --- */
@@ -273,7 +274,7 @@ pre {
 }
 
 .gallery-item:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .gallery-item img {

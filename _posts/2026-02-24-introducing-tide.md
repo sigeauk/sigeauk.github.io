@@ -2,7 +2,7 @@
 layout: default
 title: "Introducing TIDE: Threat Informed Detection Engineering"
 date: 2026-02-24
-description: How and why TIDE was developed.
+description: How to get up and running with TIDE, and begin your threat informed detection lifecycle. 
 ---
 
 # <span class="highlight">Introducing TIDE: Threat Informed Detection Engineering</span>
@@ -116,3 +116,9 @@ RULE_LOG_PATH=./data/log/rules
 ```bash
 docker compose up -d
 ```
+
+<div class="grid btn-grid">
+    <div class="cta-container">
+      <a href="https://github.com/sigeauk/TIDE" class="btn-primary">Full Documentation on GitHub</a>
+    </div>  
+</div>
