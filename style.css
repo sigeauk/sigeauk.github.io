@@ -240,9 +240,14 @@ pre {
     max-width: 720px;
 }
 
-.cta-container {
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+
+.btn-grid {
+    grid-template-columns: repeat(auto-fit, minmax(max-content, 0)); 
+    justify-content: start; /* Aligns them to the left */
+}
+
+.btn-grid .cta-container {
+    margin-top: 1rem; 
 }
 
 .text-accent {
