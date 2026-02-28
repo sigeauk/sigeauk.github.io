@@ -126,8 +126,9 @@ body {
 .feature-card, .blog-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
+    border-left: 4px solid var(--primary-accent);
 }
 
 /* --- BLOG & PRODUCT SPECIFICS --- */
