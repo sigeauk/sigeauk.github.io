@@ -273,7 +273,7 @@ pre {
 }
 
 .gallery-item:hover {
-    transform: scale(1.8);
+    transform: scale(1.4);
 }
 
 .gallery-item img {
