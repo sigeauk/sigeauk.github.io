@@ -4,8 +4,22 @@ layout: default
 
 <article class="post-content">
   <header class="hero-mini">
-    <p class="accent-subtitle" style="color: var(--primary-accent) !important;">{{ page.date | date: "%B %d, %Y" }}</p>
     <h1 class="main-heading" style="color: var(--primary-accent) !important;">{{ page.title }}</h1>
+    <div class="post-meta-row">
+      <span class="post-meta-date">{{ page.date | date: "%B %d, %Y" }}</span>
+      <span class="post-meta-taxonomy">
+        {% if page.categories.size > 0 %}
+          {% for cat in page.categories %}
+            <a href="{{ '/blog/archive/' | absolute_url }}?category={{ cat | url_encode }}" class="tag-item">{{ cat }}</a>
+          {% endfor %}
+        {% endif %}
+        {% if page.tags.size > 0 %}
+          {% for t in page.tags %}
+            <a href="{{ '/blog/archive/' | absolute_url }}?tag={{ t | url_encode }}" class="tag-item">{{ t }}</a>
+          {% endfor %}
+        {% endif %}
+      </span>
+    </div>
   </header>
 
   <div class="markdown-body">

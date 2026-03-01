@@ -1,0 +1,84 @@
+---
+layout: default
+title: Archive
+permalink: /blog/archive/
+---
+
+<div class="hero-mini">
+    <h2 class="main-heading" id="archive-heading">Archive</h2>
+    <p class="accent-subtitle" id="archive-subtitle">Browsing all posts</p>
+</div>
+
+<div class="blog-feed">
+    <!-- All posts rendered as hidden data; JS will filter -->
+    {% for post in site.posts %}
+    <article class="blog-card archive-post"
+             data-categories="{{ post.categories | join: ',' | downcase }}"
+             data-tags="{{ post.tags | join: ',' | downcase }}"
+             style="display: none;">
+        <header class="blog-card-meta">
+            {{ post.date | date: "%B %d, %Y" }}
+        </header>
+
+        <h3 class="blog-card-title">
+            <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+        </h3>
+
+        <p class="blog-card-excerpt">
+            {{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+
+        <a href="{{ post.url | absolute_url }}" class="read-more">Read Article &rarr;</a>
+    </article>
+    {% endfor %}
+
+    <p id="no-results" style="display: none; color: var(--text-dim);">No posts found for this filter.</p>
+</div>
+
+<script>
+(function () {
+    var params = new URLSearchParams(window.location.search);
+    var category = (params.get('category') || '').toLowerCase().trim();
+    var tag = (params.get('tag') || '').toLowerCase().trim();
+
+    var heading = document.getElementById('archive-heading');
+    var subtitle = document.getElementById('archive-subtitle');
+    var posts = document.querySelectorAll('.archive-post');
+    var shown = 0;
+
+    if (category) {
+        heading.textContent = category.replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+        subtitle.textContent = 'Posts in category';
+    } else if (tag) {
+        heading.textContent = tag.replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+        subtitle.textContent = 'Posts tagged';
+    } else {
+        // No filter — show everything
+        heading.textContent = 'Archive';
+        subtitle.textContent = 'All posts';
+    }
+
+    posts.forEach(function (el) {
+        var cats = el.getAttribute('data-categories');
+        var tags = el.getAttribute('data-tags');
+        var match = false;
+
+        if (category) {
+            match = cats.split(',').some(function (c) { return c.trim() === category; });
+        } else if (tag) {
+            match = tags.split(',').some(function (t) { return t.trim() === tag; });
+        } else {
+            match = true;
+        }
+
+        if (match) {
+            el.style.display = '';
+            shown++;
+        }
+    });
+
+    if (shown === 0) {
+        document.getElementById('no-results').style.display = '';
+    }
+})();
+</script>
