@@ -125,7 +125,7 @@ This is the final docker-compose.yml (Oh My!), but we only want GitLab running f
 
 Grab a coffee, this will take a while. If you're impatient and like watching logs, and who doesn't, run docker logs -f gitlab this will show a stream of the gitlab logs as it sets up, once its finished, you'll be able to browser to it. 
 
-Remember the password we set earlier 'Me either'. For those that did follow the logs you probably caught sight of the word password, for those that didn't just run the following (optional) docker logs gitlab |grep initial_root_password. This will show that the initial password is in /etc/gitlab/initial_root_password. 
+Remember the password we set earlier 'Me either'. For those that did follow the logs you probably caught sight of the word password, for those that didn't just run the following (optional) `docker logs gitlab |grep initial_root_password`. This will show that the initial password is in /etc/gitlab/initial_root_password. 
 
 To get the password we just need to read that file, but it's store in the Gitlab image, to run commands in the docker image we can use `docker exec -it image command` so for us it will be `docker exec -it gitlab cat /etc/gitlab/initial_root_password`. We'll be using docker exec -it later to register the runner.
 

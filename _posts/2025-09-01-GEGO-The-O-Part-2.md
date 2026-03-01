@@ -5,8 +5,6 @@ date: 2025-09-01
 description: "MITRE ATT&CK and TTPs"
 ---
 
-# <span class="highlight">GEKO: The 'O': Part 2</span>
-
 ### MITRE Mayhem and the TTP Treasure Hunt
 
 > “Some people play Sudoku for fun. CTI analysts play ‘connect the dots’ with nation-states. MITRE ATT&CK just gives us a bigger crayon box.”
@@ -35,8 +33,7 @@ In OpenCTI, you can build a full profile:
 "type": "intrusion-set",
 "name": "APT29",
 "aliases": ["Cozy Bear", "The Dukes"],
-"primary_motivation": "espionage",
-…
+"primary_motivation": "espionage"
 }
 ```
 Then connect it to:

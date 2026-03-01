@@ -5,8 +5,6 @@ date: 2025-08-25
 description: "STIX and Threat intell"
 ---
 
-# <span class="highlight">GEKO: The 'O': Part 1</span>
-
 ### STIX and Cyber Spies
 
 >“You ever feel like your threat intel is just… vibes? Let's fix that with structure and some OpenCTI.”
@@ -41,12 +39,10 @@ In OpenCTI, all your STIX data is packaged into Bundles, which are like lunchbox
 {
 "type": "threat-actor",
 "name": "APT29",
-…
 },
 {
 "type": "malware",
 "name": "Cobalt Strike",
-…
 },
 {
 "type": "relationship",
@@ -75,10 +71,12 @@ Let’s say you want to create a threat actor named Lord Phishington. Here’s h
 You'd pair that with relationships like:
 
 ```json
+{
 "type": "relationship",
 "relationship_type": "uses",
 "source_ref": "threat-actor--lord-phishington",
 "target_ref": "malware--evil-macro"
+}
 ```
 
 And boom — your CTI database now knows Phishington uses Evil Macro. You’re building an empire of threat knowledge.

@@ -5,8 +5,6 @@ date: 2025-09-08
 description: "Detection Rules and Courses of Action"
 ---
 
-# <span class="highlight">GEKO: The 'O': Part 3</span>
-
 ### Elastic Rules and the COA Conundrum
 
 >“You’ve tracked the threat actors, mapped the TTPs, and now it’s time to fight back, with JSON, STIX, and Courses of Action that would make Sun Tzu proud.”
@@ -16,7 +14,7 @@ description: "Detection Rules and Courses of Action"
 In STIX 2.1 and OpenCTI land, a Course of Action (COA) is the “What are you gonna do about it?” of threat intelligence. It’s the countermeasure — the detection, prevention, or response technique used to defend against known behaviors.
 
 COAs can be:
-- Elastic detection rules 💥
+- Elastic detection rules
 - Sigma/YARA rules
 - Response playbooks
 - Policy updates

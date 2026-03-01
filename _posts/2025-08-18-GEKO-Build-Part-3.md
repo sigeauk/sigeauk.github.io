@@ -5,8 +5,6 @@ date: 2025-08-18
 description: "Building GEKO - the GEK"
 ---
 
-# <span class="highlight">GEKO: Build Part 3</span>
-
 Welcome back, GEKO enthusiasts! If you’ve made it this far, you’ve wrangled GitLab, spun up your runner, and peeked under the Docker hood. Now, it’s time to unleash the real power of the GEKO stack: integrating Elasticsearch and Kibana, and putting Detection as Code (DaC) into action.  
 Where we stand;
 * GitLab is up and running, ready to manage your detection rules as code.
