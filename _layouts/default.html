@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ '/images/favicon-16x16.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | relative_url }}">
-    <link rel="icon" type="image/png" sizes="48x48" href="{{ '/images/favicon-48x48.png' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=1.0.7">
+    <link rel="shortcut icon" href="{{ '/images/favicon-16x16.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png' | absolute_url }}">
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ '/images/favicon-48x48.png' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/style.css' | absolute_url }}?v=1.0.7">
     <title>{{ page.title }} | Sigea</title>
     {% seo %}
 </head>
@@ -15,14 +15,14 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="{{ '/' | relative_url }}" class="brand-box">
-            <img src="{{ '/images/sigea.svg' | relative_url }}" alt="Sigea Logo" class="logo">
+        <a href="{{ '/' | absolute_url }}" class="brand-box">
+            <img src="{{ '/images/sigea.svg' | absolute_url }}" alt="Sigea Logo" class="logo">
             <h1 class="site-title">SIGEA</h1>
         </a>
         <nav class="site-nav">
-            <a href="{{ '/' | relative_url }}">Home</a>
-            <a href="{{ '/tide' | relative_url }}">TIDE</a>
-            <a href="{{ '/blog' | relative_url }}">Blog</a>
+            <a href="{{ '/' | absolute_url }}">Home</a>
+            <a href="{{ '/tide' | absolute_url }}">TIDE</a>
+            <a href="{{ '/blog' | absolute_url }}">Blog</a>
         </nav>
     </div>
 </header>
