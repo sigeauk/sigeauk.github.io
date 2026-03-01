@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="post-content">
+  <header class="hero-mini">
+    <p class="accent-subtitle">{{ page.date | date: "%B %d, %Y" }}</p>
+    <h1 class="main-heading">{{ page.title }}</h1>
+  </header>
+
+  <div class="markdown-body">
+    {{ content }}
+  </div>
+</article>
+
+<style>
+  /* Table styling using your specific CSS variables */
+  .markdown-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+  }
+
+  .markdown-body th {
+    background: var(--card-bg);
+    color: var(--primary-accent);
+    text-align: left;
+    border: 1px solid var(--border-color);
+    padding: 12px;
+  }
+
+  .markdown-body td {
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    color: var(--text-main);
+  }
+
+  /* Horizontal rule styling */
+  .markdown-body hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+  }
+
+  /* List spacing */
+  .markdown-body ul, .markdown-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .markdown-body li {
+    margin-bottom: 0.5rem;
+  }
+</style>
