@@ -51,7 +51,7 @@ While STRIDE and DREAD tell you *what* to worry about, <span class="text-accent"
 Start by picking a **Threat Actor** or **Intrusion Set** (via OpenCTI). TIDE immediately shows you their known techniques and your **Current Coverage** heatmap.
 
 <div class="gallery-item">
-    <img src="{{ site.baseurl }}/images/Heatmap.jpeg" alt="Heatmap">
+    <img src="{{ site.baseurl }}/images/Heatmap.png" alt="Heatmap">
 </div>
 
 ### Step 2: Identify the Gap
@@ -65,7 +65,7 @@ You notice a gap in **Valid Accounts (T1078)**—a classic **Spoofing** and **El
 Clicking T1078 takes you to a dedicated **Sigma page**. TIDE filters all available SigmaHQ rules for that specific technique. You pick the most relevant rule for your environment.
 
 <div class="gallery-item">
-    <img src="{{ site.baseurl }}/images/Suggestions.jpeg" alt="Suggestions">
+    <img src="{{ site.baseurl }}/images/Suggestions.png" alt="Suggestions">
 </div>
 
 ### Step 4: Convert and Stage
