@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "From Theory to Detection: Automating STRIDE and DREAD with TIDE"
+title: "Automating STRIDE and DREAD with TIDE"
 date: 2026-02-28
 categories: [Cybersecurity, Threat Modeling]
 tags: [STRIDE, DREAD, Sigma, MITRE, TIDE]

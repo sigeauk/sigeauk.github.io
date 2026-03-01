@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blog
-description: Stay updated with Sigea's latest insights on Threat Informed Detection Engineering, cybersecurity trends, and best practices.
+description: Stay updated with Sigea's latest insights on Threat Informed Detection Engineering.
 ---
 
 <div class="hero-mini">
@@ -10,32 +10,72 @@ description: Stay updated with Sigea's latest insights on Threat Informed Detect
     <p class="lead-text">Stay updated with Sigea's latest insights on Threat Informed Detection Engineering, cybersecurity trends, and best practices.</p>
 </div>
 
-<div class="blog-feed">
-    <p class="post-count">Total Posts: {{ site.posts | size }}</p>
+<div class="blog-layout">
+    <div class="blog-feed">
+        <p class="post-count">Total Posts: {{ site.posts | size }}</p>
 
-    {% for post in site.posts %}
-    <article class="blog-card">
-        <header class="blog-card-meta">
-            {{ post.date | date: "%B %d, %Y" }}
-        </header>
-        
-        <h3 class="blog-card-title">
-            <a href="{{ post.url | relative_url }}">
-                {{ post.title }}
+        {% for post in paginator.posts %}
+        <article class="blog-card">
+            <header class="blog-card-meta">
+                {{ post.date | date: "%B %d, %Y" }}
+            </header>
+            
+            <h3 class="blog-card-title">
+                <a href="{{ post.url | absolute_url }}">
+                    {{ post.title }}
+                </a>
+            </h3>
+            
+            <p class="blog-card-excerpt">
+                {% if post.description %}
+                    {{ post.description }}
+                {% else %}
+                    {{ post.excerpt | strip_html | truncatewords: 25 }}
+                {% endif %}
+            </p>
+            
+            <a href="{{ post.url | absolute_url }}" class="read-more">
+                Read Article →
             </a>
-        </h3>
-        
-        <p class="blog-card-excerpt">
-            {% if post.description %}
-                {{ post.description }}
-            {% else %}
-                {{ post.excerpt | strip_html | truncatewords: 25 }}
+        </article>
+        {% endfor %}
+
+        {% if paginator.total_pages > 1 %}
+        <nav class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | absolute_url }}" class="btn-primary">Prev</a>
             {% endif %}
-        </p>
-        
-        <a href="{{ post.url | relative_url }}" class="read-more">
-            Read Article →
-        </a>
-    </article>
-    {% endfor %}
+
+            <span class="post-count" style="margin: 0 1rem;">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | absolute_url }}" class="btn-primary">Next</a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    </div>
+
+    <aside class="blog-sidebar">
+        <div class="sidebar-group">
+            <h4 class="sidebar-header">Categories</h4>
+            <ul class="sidebar-list">
+                {% for category in site.categories %}
+                <li>
+                    <a href="{{ '/blog/category/' | append: category[0] | slugify | absolute_url }}" class="read-more" style="display: block; margin-bottom: 0.5rem; font-weight: normal;">
+                        {{ category[0] }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="sidebar-group">
+            <h4 class="sidebar-header">Tags</h4>
+            <div class="tag-cloud">
+                {% for tag in site.tags %}
+                <a href="{{ '/blog/tag/' | append: tag[0] | slugify | absolute_url }}" class="tag-item">#{{ tag[0] }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </aside>
 </div>

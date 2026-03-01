@@ -319,6 +319,77 @@ pre {
     color: var(--card-bg);
 }
 
+
+/* Blog Layout Wrapper */
+.blog-layout {
+    display: flex;
+    gap: 40px;
+}
+
+.blog-feed { flex: 3; }
+
+.blog-sidebar { 
+    flex: 1; 
+    min-width: 260px; 
+}
+
+/* Sidebar Specifics */
+.sidebar-group {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-accent); /* Matches your blog-card style */
+}
+
+.sidebar-header {
+    color: var(--primary-accent);
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-item {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--bg-color);
+}
+
+.tag-item:hover {
+    color: var(--primary-accent);
+    border-color: var(--primary-accent);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .blog-layout { flex-direction: column; }
+}
+
 /* --- SYNTAX HIGHLIGHTING (Rouge - Dark Theme) --- */
 span.highlight {
     color: var(--primary-accent);
