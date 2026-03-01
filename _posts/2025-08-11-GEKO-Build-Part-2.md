@@ -1,11 +1,9 @@
 ---
-layout: default
+layout: post
 title: "GEKO: Build Part 2"
 date: 2025-08-11
 description: "Building GEKO - the G"
 ---
-
-# GEKO: Build Part 2
 
 ### <span class="highlight">Intro: Why GEKO?</span>
 
