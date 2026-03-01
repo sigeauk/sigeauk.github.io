@@ -14,13 +14,14 @@ permalink: /blog/archive/
     <article class="blog-card archive-post" 
              data-categories="{{ post.categories | join: ',' | downcase }}" 
              data-tags="{{ post.tags | join: ',' | downcase }}" 
-             style="display: none; margin-bottom: 2rem;">
-        <header class="blog-card-meta">{{ post.date | date: "%B %d, %Y" }}</header>
+             style="display: none; background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--primary-accent); margin-bottom: 2rem;">
+        <header class="blog-card-meta" style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 0.5rem;">
+            {{ post.date | date: "%B %d, %Y" }}
+        </header>
         <h3 class="blog-card-title">
-            <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+            <a href="{{ post.url | absolute_url }}" style="color: var(--text-main); text-decoration: none;">{{ post.title }}</a>
         </h3>
-        <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <a href="{{ post.url | absolute_url }}" class="read-more">Read Article →</a>
+        <p class="blog-card-excerpt" style="color: var(--text-dim);">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
     </article>
     {% endfor %}
 </div>
@@ -33,7 +34,7 @@ permalink: /blog/archive/
     const title = document.getElementById('archive-title');
 
     if (cat) {
-        title.innerText = "Category: " + cat.charAt(0).toUpperCase() + cat.slice(1);
+        title.innerText = "Category: " + cat;
         posts.forEach(p => {
             if (p.dataset.categories.split(',').includes(cat.toLowerCase())) p.style.display = 'block';
         });
