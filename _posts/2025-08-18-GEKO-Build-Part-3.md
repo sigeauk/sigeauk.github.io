@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "GEKO: Build Part 3"
 date: 2025-08-18
 description: "Building GEKO - the GEK"

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "GEKO: The 'O' Part 1"
 date: 2025-08-25
 description: "STIX and Threat intell"

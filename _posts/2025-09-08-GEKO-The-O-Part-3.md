@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "GEKO: The 'O' Part 3"
 date: 2025-09-08
 description: "Detection Rules and Courses of Action"

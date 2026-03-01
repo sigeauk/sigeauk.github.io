@@ -1,15 +1,13 @@
 ---
-layout: default
+layout: post
 title: "Introducing TIDE: Threat Informed Detection Engineering"
 date: 2026-02-24
 description: How to get up and running with TIDE, and begin your threat informed detection lifecycle. 
 ---
 
-# <span class="highlight">Introducing TIDE: Threat Informed Detection Engineering</span>
-
 In modern security operations, the gap between raw threat intelligence and actionable defense is a constant challenge. <span class="text-accent">**TIDE**</span> (Threat Informed Detection Engine) is our open-source solution designed to bridge that gap by treating detection as an engineering discipline.
 
-## <span class="text-accent">Why TIDE?</span>
+## Why TIDE?
 
 TIDE provides a "Human-in-the-Loop" interface for managing detection rules and analyzing threat coverage. Our philosophy is built on three pillars:
 
@@ -17,14 +15,15 @@ TIDE provides a "Human-in-the-Loop" interface for managing detection rules and a
 * **Alignment:** Mapping defensive measures to adversary behaviors via MITRE ATT&CK®.
 * **Automation:** Programmatic lifecycles that reduce manual SOC burdens.
 
-## <span class="text-accent">The Technical Stack</span>
+## The Technical Stack
 
 TIDE is built for speed and portability, utilizing:
 * **FastAPI:** High-performance backend logic.
 * **DuckDB:** Embedded analytics for zero-dependency data handling.
 * **HTMX:** A responsive frontend without heavy JS overhead.
 
-## <span class="text-accent">Quick Start</span>
+## Quick Start
+
 You can deploy the full TIDE stack using Docker:
 
 ```yaml
