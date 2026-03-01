@@ -3,6 +3,8 @@ layout: post
 title: "GEKO: The 'O' Part 2"
 date: 2025-09-01
 description: "MITRE ATT&CK and TTPs"
+categories: [Cybersecurity, Detection Engineering, Threat Intell]
+tags: [GEKO, GitLab, ElasticSearch, Kibana, OpenCTI]
 ---
 
 ### MITRE Mayhem and the TTP Treasure Hunt

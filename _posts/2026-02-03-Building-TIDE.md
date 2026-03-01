@@ -3,6 +3,8 @@ layout: post
 title: "Building TIDE: Threat Informed Detection Engineering"
 date: 2026-02-03
 description: "A technical deep-dive into the architecture of TIDE—bridging the gap between raw threat intelligence and validated detection logic."
+categories: [Cybersecurity, Detection Engineering, Threat Intell]
+tags: [TIDE, ElasticSearch, Kibana, OpenCTI, MITRE, Sigma]
 ---
 
 As Detection Engineers, we often find ourselves straddling two disconnected worlds. In one browser tab, we monitor our SIEM (Elastic, Splunk, etc.), managing a vast library of detection rules. In another, we scroll through threat intelligence feeds (OpenCTI, MITRE ATT&CK®), trying to keep up with the latest adversary behaviors.

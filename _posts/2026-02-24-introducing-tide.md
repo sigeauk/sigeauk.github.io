@@ -2,7 +2,9 @@
 layout: post
 title: "Introducing TIDE: Threat Informed Detection Engineering"
 date: 2026-02-24
-description: How to get up and running with TIDE, and begin your threat informed detection lifecycle. 
+description: How to get up and running with TIDE, and begin your threat informed detection lifecycle.
+categories: [Cybersecurity, Detection Engineering, Threat Intell]
+tags: [TIDE, ElasticSearch, Kibana, OpenCTI, MITRE, Sigma]
 ---
 
 In modern security operations, the gap between raw threat intelligence and actionable defense is a constant challenge. <span class="text-accent">**TIDE**</span> (Threat Informed Detection Engine) is our open-source solution designed to bridge that gap by treating detection as an engineering discipline.

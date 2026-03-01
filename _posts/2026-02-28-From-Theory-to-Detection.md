@@ -2,9 +2,9 @@
 layout: post
 title: "Automating STRIDE and DREAD with TIDE"
 date: 2026-02-28
+description: From STRIDE and DREAD to actionable detections.
 categories: [Cybersecurity, Threat Modeling]
 tags: [STRIDE, DREAD, Sigma, MITRE, TIDE]
-description: From STRIDE and DREAD to actionable detections.
 ---
 
 In the world of Security, we often talk about "shifting left." We want to catch vulnerabilities before they hit production. To do that, we use two industry-standard frameworks: **STRIDE** and **DREAD**. 

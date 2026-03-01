@@ -3,6 +3,8 @@ layout: post
 title: "GEKO: The 'O' Part 3"
 date: 2025-09-08
 description: "Detection Rules and Courses of Action"
+categories: [Cybersecurity, Detection Engineering, Threat Intell]
+tags: [GEKO, GitLab, ElasticSearch, Kibana, OpenCTI]
 ---
 
 ### Elastic Rules and the COA Conundrum

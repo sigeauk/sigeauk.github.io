@@ -47,32 +47,55 @@ title: Blog
 
     <!-- Sidebar -->
     <aside class="blog-sidebar">
-        {% if site.categories.size > 0 %}
         <div class="sidebar-group">
+            <h4 class="sidebar-header">Search</h4>
+            <input type="text" id="sidebar-search" class="sidebar-search" placeholder="Filter categories & tags…">
+        </div>
+
+        {% if site.categories.size > 0 %}
+        <div class="sidebar-group" id="sidebar-categories">
             <h4 class="sidebar-header">Categories</h4>
-            <ul class="sidebar-list">
-                {% for category in site.categories %}
-                <li style="margin-bottom: 0.5rem;">
-                    <a href="{{ '/blog/archive/' | absolute_url }}?category={{ category[0] | url_encode }}" class="tag-item">
-                        {{ category[0] }} ({{ category[1].size }})
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+            <div class="sidebar-scroll">
+                <ul class="sidebar-list">
+                    {% for category in site.categories %}
+                    <li class="sidebar-filter-item" style="margin-bottom: 0.5rem;">
+                        <a href="{{ '/blog/archive/' | absolute_url }}?category={{ category[0] | url_encode }}" class="tag-item">
+                            {{ category[0] }} ({{ category[1].size }})
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
         {% endif %}
 
         {% if site.tags.size > 0 %}
-        <div class="sidebar-group">
+        <div class="sidebar-group" id="sidebar-tags">
             <h4 class="sidebar-header">Tags</h4>
-            <div class="tag-cloud">
-                {% for tag in site.tags %}
-                <a href="{{ '/blog/archive/' | absolute_url }}?tag={{ tag[0] | url_encode }}" class="tag-item">
-                    {{ tag[0] }}
-                </a>
-                {% endfor %}
+            <div class="sidebar-scroll">
+                <div class="tag-cloud">
+                    {% for tag in site.tags %}
+                    <a href="{{ '/blog/archive/' | absolute_url }}?tag={{ tag[0] | url_encode }}" class="tag-item sidebar-filter-item">
+                        {{ tag[0] }}
+                    </a>
+                    {% endfor %}
+                </div>
             </div>
         </div>
         {% endif %}
     </aside>
 </div>
+
+<script>
+(function () {
+    var input = document.getElementById('sidebar-search');
+    if (!input) return;
+    input.addEventListener('input', function () {
+        var query = this.value.toLowerCase().trim();
+        document.querySelectorAll('.sidebar-filter-item').forEach(function (el) {
+            var text = el.textContent.toLowerCase();
+            el.style.display = text.includes(query) ? '' : 'none';
+        });
+    });
+})();
+</script>

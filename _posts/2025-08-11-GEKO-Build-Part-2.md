@@ -3,6 +3,8 @@ layout: post
 title: "GEKO: Build Part 2"
 date: 2025-08-11
 description: "Building GEKO - the G"
+categories: [Cybersecurity, Detection Engineering]
+tags: [GEKO, GitLab, ElasticSearch, Kibana]
 ---
 
 ### Intro: Why GEKO?
