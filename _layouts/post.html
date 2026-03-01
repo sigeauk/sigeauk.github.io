@@ -14,16 +14,16 @@ layout: default
 </article>
 
 <style>
-  /* Fix Title Colors in the body */
+  /* Fix Title Colors for Markdown Headings */
   .markdown-body h2, 
   .markdown-body h3 {
     color: var(--primary-accent) !important;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
-  /* Ensure Tables are Visible */
+  /* Ensure Tables are Visible with your Site Borders */
   .markdown-body table {
-    display: table !important; /* Force display */
+    display: table !important;
     width: 100%;
     border-collapse: collapse !important;
     margin: 2rem 0;
@@ -45,12 +45,22 @@ layout: default
     color: var(--text-main);
   }
 
-  /* Fix for images in the blog */
-  .gallery-item {
-    margin: 2rem 0;
+  /* Disable the Image "Growing" (Scale) effect from style.css */
+  .markdown-body .gallery-item {
+    transition: none !important;
+    transform: none !important;
   }
-  
-  .gallery-item img {
+
+  .markdown-body .gallery-item:hover {
+    transform: none !important;
+  }
+
+  .markdown-body img {
+    max-width: 100%;
+    height: auto;
     border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: block;
+    margin: 1rem 0;
   }
 </style>
