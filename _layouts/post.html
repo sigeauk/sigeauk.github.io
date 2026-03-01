@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="post-content">
+  <header class="hero-mini">
+    <p class="accent-subtitle" style="color: var(--primary-accent) !important;">{{ page.date | date: "%B %d, %Y" }}</p>
+    <h1 class="main-heading" style="color: var(--primary-accent) !important;">{{ page.title }}</h1>
+  </header>
+
+  <div class="markdown-body">
+    {{ content }}
+  </div>
+</article>
+
+<style>
+  /* Fix Title Colors in the body */
+  .markdown-body h2, 
+  .markdown-body h3 {
+    color: var(--primary-accent) !important;
+    margin-top: 2rem;
+  }
+
+  /* Ensure Tables are Visible */
+  .markdown-body table {
+    display: table !important; /* Force display */
+    width: 100%;
+    border-collapse: collapse !important;
+    margin: 2rem 0;
+    border: 1px solid var(--border-color) !important;
+    background-color: var(--card-bg);
+  }
+
+  .markdown-body th {
+    background: var(--bg-color);
+    color: var(--primary-accent);
+    border: 1px solid var(--border-color) !important;
+    padding: 12px;
+    font-weight: bold;
+  }
+
+  .markdown-body td {
+    border: 1px solid var(--border-color) !important;
+    padding: 12px;
+    color: var(--text-main);
+  }
+
+  /* Fix for images in the blog */
+  .gallery-item {
+    margin: 2rem 0;
+  }
+  
+  .gallery-item img {
+    border: 1px solid var(--border-color);
+  }
+</style>
