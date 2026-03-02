@@ -53,10 +53,6 @@ Start by picking a **Threat Actor** or **Intrusion Set** (via OpenCTI). TIDE imm
 ### Step 2: Identify the Gap
 You notice a gap in **Valid Accounts (T1078)**—a classic **Spoofing** and **Elevation of Privilege** threat. TIDE display this as a gap based on the actor's profile.
 
-<div class="gallery-item">
-    <img src="{{ site.baseurl }}/images/Sigma.jpeg" alt="Sigma">
-</div>
-
 ### Step 3: Source the Logic
 Clicking T1078 takes you to a dedicated **Sigma page**. TIDE filters all available SigmaHQ rules for that specific technique. You pick the most relevant rule for your environment.
 
@@ -66,6 +62,10 @@ Clicking T1078 takes you to a dedicated **Sigma page**. TIDE filters all availab
 
 ### Step 4: Convert and Stage
 TIDE converts the Sigma rule into your specific **SIEM language** (Elastic, Splunk, etc.) and deploys it to your **Staging environment**.
+
+<div class="gallery-item">
+    <img src="{{ site.baseurl }}/images/Sigma.jpeg" alt="Sigma">
+</div>
 
 ### Step 5: Audit and Quality Control
 In the Staging view, you can review the **Rule Score** and logic. TIDE highlights metadata gaps so you can refine the rule before it goes live.
