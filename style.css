@@ -327,6 +327,12 @@ pre {
     gap: 40px;
 }
 
+/* Left column: heading + feed */
+.blog-main {
+    flex: 3;
+    min-width: 0;
+}
+
 .blog-feed { flex: 3; }
 
 .blog-sidebar { 
@@ -464,7 +470,18 @@ pre {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .blog-layout { flex-direction: column; }
+    .blog-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .blog-main {
+        width: 100%;
+    }
+    .blog-sidebar {
+        min-width: 0;
+        width: 100%;
+        position: static;
+    }
 }
 
 /* --- SYNTAX HIGHLIGHTING (Rouge - Dark Theme) --- */

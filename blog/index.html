@@ -3,13 +3,15 @@ layout: default
 title: Blog
 ---
 
-<div class="hero-mini">
-    <h2 class="main-heading">Blog</h2>
-    <p class="accent-subtitle">Detection Engineering and Threat Intelligence Updates</p>
-    <p class="lead-text">Stay updated with Sigea's latest insights.</p>
-</div>
-
 <div class="blog-layout">
+    <!-- Left column: heading + feed -->
+    <div class="blog-main">
+        <div class="hero-mini">
+            <h2 class="main-heading">Blog</h2>
+            <p class="accent-subtitle">Detection Engineering and Threat Intelligence Updates</p>
+            <p class="lead-text">Stay updated with Sigea's latest insights.</p>
+        </div>
+
     <!-- Main Feed (uses paginator.posts, NOT site.posts) -->
     <div class="blog-feed">
         {% for post in paginator.posts %}
@@ -44,6 +46,7 @@ title: Blog
         </nav>
         {% endif %}
     </div>
+    </div><!-- /.blog-main -->
 
     <!-- Sidebar -->
     <aside class="blog-sidebar">
