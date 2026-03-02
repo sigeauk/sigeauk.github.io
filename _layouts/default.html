@@ -33,19 +33,17 @@
 
 <div class="footer-container">
     <footer class="footer">
-        <p>&copy; {{ "now" | date: "%Y" }} Sigea.</p>
-        <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" 
-           target="_blank" 
-           rel="noopener" 
-           class="footer-badge">
-            <img src="{{ '/images/sigea 48x48.png' | absolute_url }}" alt="Cyber Essentials Certified">
-        </a>
-        <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" 
-           target="_blank" 
-           rel="noopener" 
-           class="footer-badge">
-            <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials Certified">
-        </a>
+        <p class="copyright-text">&copy; {{ "now" | date: "%Y" }} Sigea.</p>
+        
+        <div class="footer-badges">
+            <a href="https://github.com/sigeauk/tide" target="_blank" rel="noopener">
+                <img src="{{ '/images/tide 48x48.png' | absolute_url }}" alt="TIDE">
+            </a>
+            
+            <<a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" target="_blank" rel="noopener">
+                <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials">
+            </a>
+        </div>
     </footer>
 </div>
 

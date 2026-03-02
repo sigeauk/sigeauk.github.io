@@ -35,30 +35,33 @@ body {
 
 .footer {
     display: flex;
-    justify-content: space-between; /* Pushes text left, badge right */
-    align-items: flex-start;           /* Vertically aligns items to the top */
-    padding: 2rem 0;               /* Adds some breathing room */
-    border-top: 1px solid #eee;    /* Optional: adds a subtle line above the footer */
+    justify-content: space-between; /* Pushes text left, badges div right */
+    align-items: center;
+    padding: 2rem 0;
 }
 
-.footer-badge img {
-    height: 50px;                  /* Adjust this height to fit your design */
+.footer-badges {
+    display: flex;
+    gap: 15px;      /* Adds space between the images */
+    align-items: center;
+}
+
+.footer-badges img {
+    height: 45px;   /* Sets a consistent height for all badges */
     width: auto;
-    align-items: end;
     display: block;
-    transition: opacity 0.3s ease;
 }
 
-.footer-badge img:hover {
-    opacity: 0.8;                  /* Subtle feedback when hovering over the link */
-}
-
-/* Responsive: Stack them on top of each other on mobile */
+/* Mobile: Stack everything vertically and center it */
 @media (max-width: 600px) {
     .footer {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
         text-align: center;
+    }
+    
+    .footer-badges {
+        justify-content: center; /* Centers images on mobile */
     }
 }
 
