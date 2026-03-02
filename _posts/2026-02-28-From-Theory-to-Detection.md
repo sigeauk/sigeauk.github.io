@@ -51,17 +51,20 @@ Start by picking a **Threat Actor** or **Intrusion Set** (via OpenCTI). TIDE imm
 </div>
 
 ### Step 2: Identify the Gap
-You notice a gap in **Valid Accounts (T1078)**—a classic **Spoofing** and **Elevation of Privilege** threat. TIDE display this as a gap based on the actor's profile.
+We'll use **Valid Accounts (T1078)**—a classic **Spoofing** and **Elevation of Privilege** threat. TIDE displays that we have 12 current rules mapped to this, but we can still use the sigma link to see if we can enhance over coverage.
 
-### Step 3: Source the Logic
-Clicking T1078 takes you to a dedicated **Sigma page**. TIDE filters all available SigmaHQ rules for that specific technique. You pick the most relevant rule for your environment.
+### Step 3: See Technique detail
+Clicking `T1078` pops out a Technique overview, showing number of rules if any, and also a link to the sigma page.
 
 <div class="gallery-item">
     <img src="{{ site.baseurl }}/images/Suggestions.png" alt="Suggestions">
 </div>
 
+### Step 4: Source the Logic
+Clicking `Sigma` takes you to a dedicated **Sigma page**. TIDE filters all available SigmaHQ rules for that specific technique (T1078). You pick the most relevant rule for your environment.
+
 ### Step 4: Convert and Stage
-TIDE converts the Sigma rule into your specific **SIEM language** (Elastic, Splunk, etc.) and deploys it to your **Staging environment**.
+TIDE converts the Sigma rule into your specific **SIEM language** (Elastic, Splunk, etc.) and can deploy it to your **Staging environment**.
 
 <div class="gallery-item">
     <img src="{{ site.baseurl }}/images/Sigma.jpeg" alt="Sigma">
@@ -71,13 +74,16 @@ TIDE converts the Sigma rule into your specific **SIEM language** (Elastic, Splu
 In the Staging view, you can review the **Rule Score** and logic. TIDE highlights metadata gaps so you can refine the rule before it goes live.
 
 <div class="gallery-item">
-    <img src="{{ site.baseurl }}/images/Health.jpeg" alt="Rule Health">
+    <img src="{{ site.baseurl }}/images/Promotion.jpeg" alt="Promotion">
 </div>
 
 ### Step 6: Promote and Visualize
-Once you're happy, hit **Promote** in TIDE. The rule moves to production, and your MITRE heatmap updates instantly. You can now see—in green—that your "Elevation of Privilege" risk is actively mitigated.
+Once you're happy, hit **Promote** in TIDE. The rule moves to production, and your MITRE heatmap updates instantly.
 
 ---
+<div class="gallery-item">
+    <img src="{{ site.baseurl }}/images/Health.jpeg" alt="Rule Health">
+</div>
 
 ## Conclusion: Stop Modeling in a Vacuum
 Threat modeling shouldn't be a one-time exercise that lives in a PDF. With **TIDE**, your STRIDE and DREAD models become living, breathing components of your SOC. 
