@@ -36,7 +36,7 @@ body {
 .footer {
     display: flex;
     justify-content: space-between; /* Pushes text left, badge right */
-    align-items: center;           /* Vertically centers both */
+    align-items: flex-start;           /* Vertically aligns items to the top */
     padding: 2rem 0;               /* Adds some breathing room */
     border-top: 1px solid #eee;    /* Optional: adds a subtle line above the footer */
 }
@@ -44,6 +44,7 @@ body {
 .footer-badge img {
     height: 50px;                  /* Adjust this height to fit your design */
     width: auto;
+    align-items: end;
     display: block;
     transition: opacity 0.3s ease;
 }
