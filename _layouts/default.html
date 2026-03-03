@@ -36,18 +36,33 @@
         <p class="copyright-text">&copy; {{ "now" | date: "%Y" }} Sigea.</p>
         
         <div class="footer-badges">
-            <div class="footer-badge-item">
-                <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" target="_blank" rel="noopener">
-                    <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials">
-                </a>
-                <span class="badge-label">Certified</span>
+            <div class="badge-group">
+                <span class="group-header">Certification</span>
+                <div class="footer-badge-item">
+                    <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" target="_blank" rel="noopener">
+                        <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials">
+                    </a>
+                    <span class="badge-label">Cyber Essentials</span>
+                </div>
             </div>
 
-            <div class="footer-badge-item">
-                <a href="https://guardedglass.com" target="_blank" rel="noopener">
-                    <img src="{{ '/images/GG.png' | absolute_url }}" alt="Guared Glass">
-                </a>
-                <span class="badge-label">Official Associate</span>
+            <div class="badge-group">
+                <span class="group-header">Official Associates</span>
+                <div class="group-items">
+                    <div class="footer-badge-item">
+                        <a href="https://guardedglass.com" target="_blank" rel="noopener">
+                            <img src="{{ '/images/GG.png' | absolute_url }}" alt="Guarded Glass">
+                        </a>
+                        <span class="badge-label">Guarded Glass</span>
+                    </div>
+
+                    <div class="footer-badge-item">
+                        <a href="https://plannedlink.io" target="_blank" rel="noopener">
+                            <img src="{{ '/images/plannedlink.png' | absolute_url }}" alt="Planned Link">
+                        </a>
+                        <span class="badge-label">Planned Link</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

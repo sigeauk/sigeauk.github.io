@@ -39,27 +39,50 @@ body {
     align-items: center;
     padding: 2rem 0;
 }
-
 .footer-badges {
     display: flex;
-    gap: 15px;
-    align-items: center;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Container for the label + the logos */
+.badge-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* The "Official Associate" or "Certification" top text */
+.group-header {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    border-bottom: 1px solid #eee; /* Adds a subtle underline for structure */
+    padding-bottom: 4px;
+    display: block;
+}
+
+/* Horizontal layout for items within a group */
+.group-items {
+    display: flex;
+    gap: 25px;
 }
 
 .footer-badge-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    min-width: 80px; /* Ensures consistent spacing */
 }
 
 .footer-badge-item img {
-    height: 40px;
+    height: 35px; /* Scaled down slightly for the new layout */
     width: auto;
-    display: block;
     filter: grayscale(100%);
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .footer-badge-item:hover img {
@@ -68,24 +91,26 @@ body {
 }
 
 .badge-label {
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-dim);
-    font-weight: 600;
+    font-size: 11px;
+    color: #444;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
-
+/* Mobile: Stack groups and items */
 @media (max-width: 600px) {
-    .footer {
+    .footer-badges {
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .group-header {
         text-align: center;
     }
-    
-    .footer-badges {
+
+    .group-items {
         justify-content: center;
-        flex-wrap: wrap; 
     }
 }
 
