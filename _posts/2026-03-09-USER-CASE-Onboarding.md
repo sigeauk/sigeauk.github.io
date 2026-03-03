@@ -3,15 +3,15 @@ layout: post
 title:  "USER CASE: Seamless Onboarding—From CISO Intent to Engineered Defense"
 date:   2026-03-09
 author: Sigea Team
-categories: [Use Cases, Enterprise Security, Workflow]
-tags: [Onboarding, CISO, Detection Engineering, Sigma, Remote Access]
+categories: [Use Case, Enterprise Security, Workflow]
+tags: [Onboarding, CISO, Detection Engineering, Sigma]
 ---
 
-Security is often siloed. A CISO identifies a risk, a manager assigns a task, and an engineer writes a rule—but often, no one can actually prove the original risk was neutralized. 
+Security is often siloed. A CISO identifies a risk, a manager assigns a task, and an engineer writes a rule, but often, no one can actually prove the original risk was neutralized. 
 
 In this use case, we look at the **Enterprise Onboarding Process**: a structured journey that takes a high-level security concern and turns it into a verified, high-quality detection in your SIEM. 
 
-Here is how TIDE facilitates that journey.
+Here is how <span class="text-accent">TIDE</span> facilitates that journey.
 
 ---
 
@@ -20,7 +20,7 @@ Here is how TIDE facilitates that journey.
 
 During an initial onboarding session, the CISO isn't looking at code; they are looking at the business. For this example, let's say the CISO identifies **Remote Access** as the #1 priority due to a shift in the company's hybrid-work policy.
 
-* **Action:** In the TIDE dashboard, a project is created: "Remote Access Hardening."
+* **Action:** In TIDE*, a project is created: "Remote Access Hardening."
 * **The Goal:** Ensure any unauthorized entry or lateral movement via remote protocols is detected instantly.
 
 > **CISO View:** "I’ve defined the risk. Now I need to see the roadmap to mitigation."
@@ -32,12 +32,12 @@ During an initial onboarding session, the CISO isn't looking at code; they are l
 
 The Security Manager takes the "Remote Access" initiative and uses TIDE to map it to the **STRIDE** framework. 
 * **Threat:** *Spoofing* and *Elevation of Privilege* via remote services.
-* **The TTP List:** TIDE suggests a baseline of MITRE ATT&CK techniques, such as:
+* **The TTP List:**
     * **T1133** (External Remote Services)
     * **T1021.001** (Remote Desktop Protocol)
     * **T1021.004** (SSH)
 
-**The Gap Discovery:** TIDE compares these techniques against the current rule set. The Manager sees that while RDP is covered, **SSH (T1021.004)** is a "Gray Zone." This becomes the Engineering team's primary objective.
+**The Gap Discovery:** TIDE compares these techniques against the current rule set. The Manager sees that while SSH is covered, **RDP (T1021.001)** is a not. This becomes the Engineering team's primary objective.
 
 ---
 
@@ -85,3 +85,5 @@ By following this onboarding process, TIDE ensures that security isn't just a se
 **Is your team speaking the same language? Stop guessing and start onboarding with TIDE.**
 
 [Try TIDE Today] [View Documentation]
+
+\* Adding MITRE mapping is currently achived vai OpenCTI. 
