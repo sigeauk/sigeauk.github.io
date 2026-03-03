@@ -80,25 +80,14 @@ Once satisfied in Staging, the Engineer hits **Promote** within <span class="tex
 
 * **Executive Proof:** The CISO logs back in. They see the "Trust Store Integrity" project move toward completion. The process then repeats for the remaining gap: **T1546.001**.
 
-> **The CISO Result:** "I asked for interception protection. <span class="text-accent">TIDE</span> shows me exactly how and when we achieved it, turning a blind spot into a hardened defense."
+> **The CISO Result:** "I asked for interception protection. <span class="text-accent">TIDE</span> shows me exactly how we achieved it, turning a blind spot into a hardened defense."
 
 ---
 
 ### Future-Proofing with OpenCTI
-Currently, to enrich these cases with the latest global threat intelligence, users can add a **container as an OpenCTI input**. This allows you to pull in specific "Root CA" threat actors and campaigns directly into your mapping workflow. 
+Currently, to enrich these cases with the latest global threat intelligence, users can add a **container as an OpenCTI intrusion set**. This allows you to pull in specific "Root CA" threat actors and campaigns directly into your mapping workflow. 
 
 > **Note:** While this is currently handled via external container integration, this capability will be **fully native within <span class="text-accent">TIDE</span> in a future release**, providing a seamless, single-pane-of-glass experience for threat-informed defense.
-
----
-
-### The Onboarding "Must-Haves"
-If you’re using <span class="text-accent">TIDE</span> for the first time, we recommend onboarding these three "Integrity" profiles immediately:
-
-| Profile | Key TTP to Map | Target Log Source |
-| :--- | :--- | :--- |
-| **Trust Integrity** | T1553.004 (Root Certificate) | Sysmon / Linux Auditd |
-| **Identity Defense** | T1078 (Valid Accounts) | AD / Okta / Azure AD |
-| **Endpoint Integrity** | T1070.001 (Clear Event Logs) | EDR / Sysmon |
 
 ---
 
