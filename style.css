@@ -57,9 +57,8 @@ body {
     font-size: 9px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #999;
-    border-bottom: 1px solid #eee; /* Adds a subtle underline for structure */
-    padding-bottom: 4px;
+    color: var(--text-dim);
+    padding-bottom: 2px;
     display: block;
 }
 
@@ -74,11 +73,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    min-width: 80px; /* Ensures consistent spacing */
+    min-width: 80px;
 }
 
 .footer-badge-item img {
-    height: 35px; /* Scaled down slightly for the new layout */
+    height: 35px;
     width: auto;
     filter: grayscale(100%);
     opacity: 0.7;
@@ -92,7 +91,7 @@ body {
 
 .badge-label {
     font-size: 11px;
-    color: #444;
+    color: var(--text-dim);
     font-weight: 500;
     white-space: nowrap;
 }
