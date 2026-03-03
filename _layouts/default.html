@@ -36,17 +36,19 @@
         <p class="copyright-text">&copy; {{ "now" | date: "%Y" }} Sigea.</p>
         
         <div class="footer-badges">
-            {% comment %}
-            - Placeholder for future badges (e.g., GG, certifications)
-            - Example badge link:
-            <a href="https://giuardedglass.com" target="_blank" rel="noopener">
-                <img src="{{ '/images/guarded_glass.png' | absolute_url }}" alt="Guarded Glass">
-            </a>
-            {% endcomment %}
-            
-            <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" target="_blank" rel="noopener">
-                <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials">
-            </a>
+            <div class="footer-badge-item">
+                <a href="https://registry.blockmarktech.com/certificates/7d2e3e51-546b-4820-b05c-8396d5a40ddd/" target="_blank" rel="noopener">
+                    <img src="{{ '/images/CE.png' | absolute_url }}" alt="Cyber Essentials">
+                </a>
+                <span class="badge-label">Certified</span>
+            </div>
+
+            <div class="footer-badge-item">
+                <a href="https://associate-link.com" target="_blank" rel="noopener">
+                    <img src="{{ '/images/associate-logo.png' | absolute_url }}" alt="Associate Name">
+                </a>
+                <span class="badge-label">Official Associate</span>
+            </div>
         </div>
     </footer>
 </div>
