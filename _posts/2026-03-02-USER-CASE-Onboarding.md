@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "USER CASE: Defeating Hidden Interceptors—From CISO Intent to Root CA Defense"
-date:   2026-03-09
+date:   2026-03-02
 author: Sigea Team
 categories: [Use Case, Enterprise Security, Workflow]
 tags: [Root Certificate, CISO, Detection Engineering, Sigma, AiTM]
