@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "USER CASE: Defeating Hidden Interceptors—From CISO Intent to Root CA Defense"
+title:  "USER CASE: Threat to Detect"
 date:   2026-03-02
 author: Sigea Team
 categories: [Use Case, Enterprise Security, Workflow]
