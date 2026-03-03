@@ -77,4 +77,24 @@ layout: default
     display: block;
     margin: 1rem 0;
   }
+
+  /* Style Blockquotes (the '>' in Markdown) */
+  .markdown-body blockquote {
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-dim);
+    background-color: var(--card-bg);
+    border-left: 1px solid var(--primary-accent);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* Ensure paragraphs inside the blockquote don't have extra margins */
+  .markdown-body blockquote p {
+    margin: 0;
+    font-style: italic;
+  }
+
 </style>
