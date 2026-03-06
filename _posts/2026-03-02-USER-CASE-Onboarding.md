@@ -87,6 +87,8 @@ Once satisfied in Staging, the Engineer hits **Promote** within <span class="tex
 ### Future-Proofing with OpenCTI
 Currently, to enrich these cases with the latest global threat intelligence, users can add a **container as an OpenCTI intrusion set**. [^1] This allows you to pull in specific "Root CA" threat actors and campaigns directly into your mapping workflow. 
 
+[^1]: This will be included in TIDE in the near futre
+
 > **Note:** While this is currently handled via external container integration, this capability will be **fully native within <span class="text-accent">TIDE</span> in a future release**, providing a seamless, single-pane-of-glass experience for threat-informed defense.
 
 ---
@@ -96,4 +98,5 @@ By following this onboarding process, <span class="text-accent">TIDE</span> ensu
 
 **Is your team speaking the same language? Stop guessing and start onboarding with <span class="text-accent">TIDE</span>.**
 
-[^1]: This will be included in TIDE in the near futre
+---
+
