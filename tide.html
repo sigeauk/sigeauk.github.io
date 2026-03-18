@@ -6,24 +6,24 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
 
 <script src="https://unpkg.com/lucide@latest"></script>
 
-<div class="hero-container">
+<div class="hero-container" style="padding-bottom: 4rem;">
     <div class="hero-text">
         <h2 class="main-heading">TIDE</h2>
         <p class="accent-subtitle">Threat Informed Detection Engineering</p>
-        <p class="lead-text">
+        <p class="lead-text" style="max-width: 800px; margin: 0 auto;">
             TIDE answers the critical question: <strong>"If an adversary attacked today, would your rules actually catch them?"</strong> 
             A standalone, containerized platform for auditing detection health and mapping live threat intelligence to defensive coverage.
         </p>
     </div>
 </div>
 
-<section class="product-info">
-    <div class="section-header">
+<section class="product-info" style="margin-bottom: 4rem;">
+    <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
         <span class="text-accent"><h2>Core Platform Capabilities</h2></span>
-        <p>TIDE bridges the gap between raw threat intelligence and validated SIEM operations through a Human-in-the-Loop workflow.</p>
+        <p>TIDE bridges the gap between raw threat intelligence and validated SIEM operations.</p>
     </div>
 
-    <div class="grid">
+    <div class="grid" style="gap: 2rem;">
         <div class="feature-card">
             <i data-lucide="shield-check" class="text-accent"></i>
             <span class="text-accent"><h3>Rule Health Scoring</h3></span>
@@ -39,7 +39,7 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
         <div class="feature-card">
             <i data-lucide="file-text" class="text-accent"></i>
             <span class="text-accent"><h3>Automated Reporting</h3></span>
-            <p>Generate CISO-ready Executive Summaries and Technical Audit PDFs server-side via WeasyPrint—no external dependencies required.</p>
+            <p>Generate CISO-ready Executive Summaries and Technical Audit PDFs server-side—no external dependencies required.</p>
         </div>
 
         <div class="feature-card">
@@ -62,75 +62,68 @@ description: Explore Sigea's flagship product, TIDE—a comprehensive platform f
     </div>
 </section>
 
-<section class="product-info">
-    <details class="arch-details">
-        <summary class="btn-primary" style="display: inline-block; cursor: pointer; list-style: none;">
-            View Technical Architecture & Stack
-        </summary>
-        <div class="details-content" style="margin-top: 2rem; border-left: 2px solid var(--accent-color); padding-left: 1.5rem;">
-            <h3>Three-Tier Architecture</h3>
-            <p>Designed for stability and persistence in enterprise environments.</p>
-            <div class="grid">
-                <div class="feature-card">
-                    <span class="text-accent"><h4>Edge: Nginx</h4></span>
-                    <p>Handles SSL termination and secure reverse proxying.</p>
+<section class="product-info" style="background: rgba(255,255,255,0.03); border-radius: 12px; padding: 3rem; margin-bottom: 4rem;">
+    <div style="text-align: center;">
+        <details class="arch-details">
+            <summary class="btn-primary" style="display: inline-block; cursor: pointer; list-style: none; padding: 12px 24px;">
+                View Technical Architecture & Data Bundling
+            </summary>
+            
+            <div class="details-content" style="margin-top: 3rem; text-align: left;">
+                <div class="grid" style="margin-bottom: 3rem;">
+                    <div class="feature-card" style="background: rgba(0,0,0,0.3);">
+                        <span class="text-accent"><h4>Edge: Nginx</h4></span>
+                        <p>Reverse proxy, SSL termination, and static asset serving for secure access.</p>
+                    </div>
+                    <div class="feature-card" style="background: rgba(0,0,0,0.3);">
+                        <span class="text-accent"><h4>Core: FastAPI</h4></span>
+                        <p>REST API and HTMX partial endpoints handling the business logic and lifecycle workflow.</p>
+                    </div>
+                    <div class="feature-card" style="background: rgba(0,0,0,0.3);">
+                        <span class="text-accent"><h4>Data: DuckDB</h4></span>
+                        <p>High-performance embedded analytics database—zero external database server required.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <span class="text-accent"><h4>Core: FastAPI</h4></span>
-                    <p>Asynchronous REST API powering the HTMX dynamic frontend and business logic.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="text-accent"><h4>Data: DuckDB</h4></span>
-                    <p>Embedded OLAP database for high-performance rule caching and analytics without external DB overhead.</p>
+
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                    <span class="text-accent"><h3>The Air-Gap Strategy</h3></span>
+                    <p>Unlike standard tools that query external APIs, TIDE bundles threat context at build-time to ensure 100% functionality in isolated networks.</p>
+                    
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 1.5rem;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--accent-color); text-align: left;">
+                                <th style="padding: 12px;">Data Component</th>
+                                <th style="padding: 12px;">Source</th>
+                                <th style="padding: 12px;">Update Frequency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">Sigma Rules</td>
+                                <td style="padding: 12px;">SigmaHQ Repository</td>
+                                <td style="padding: 12px;">Every Docker Build</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">MITRE ATT&CK</td>
+                                <td style="padding: 12px;">Enterprise/Mobile/ICS Bundles</td>
+                                <td style="padding: 12px;">Every Docker Build</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px;">NVD CVE Data</td>
+                                <td style="padding: 12px;">NVD 2.0 API</td>
+                                <td style="padding: 12px;">Every Docker Build</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            
-            <h3 style="margin-top: 2rem;">Data Persistence</h3>
-            <p>TIDE maintains critical state across container updates via volume mounts at <code>/app/data/</code>:</p>
-            <ul>
-                <li><strong>tide.duckdb:</strong> Central rule cache and coverage metrics.</li>
-                <li><strong>checkedRule.json:</strong> Manual analyst validation records.</li>
-                <li><strong>triggers/:</strong> Background synchronization state.</li>
-            </ul>
-        </div>
-    </details>
-</section>
-
-<section class="product-info">
-    <span class="text-accent"><h2>Platform Screenshots</h2></span>
-    <p>A unified interface for the entire Detection Engineering lifecycle.</p>
-
-    <div class="gallery-grid">
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Threat Landscape.jpeg" alt="Threat Landscape Overview">
-            <p class="caption">Threat Landscape</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Heatmap.png" alt="MITRE ATT&CK Heatmap">
-            <p class="caption">Coverage Heatmap</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Sigma.jpeg" alt="Sigma Rule Management">
-            <p class="caption">Sigma Convert & Deploy</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Promotion.jpeg" alt="Rule Promotion Workflow">
-            <p class="caption">Rule Promotion</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/logging.png" alt="Rule Logging and Auditing">
-            <p class="caption">Logging</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Health.jpeg" alt="System Health Monitoring">
-            <p class="caption">Rule Health</p>
-        </div>
+        </details>
     </div>
 </section>
 
-<div class="grid btn-grid">
+<div class="grid btn-grid" style="padding-bottom: 5rem;">
     <div class="cta-container">
-      <a href="https://github.com/sigeauk/TIDE" class="btn-primary">View Project on GitHub</a>
+      <a href="https://github.com/sigeauk/TIDE" class="btn-primary">Full Project Documentation</a>
     </div>  
 </div>
 
