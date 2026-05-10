@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Detection as Code: Moving beyond the 'Tick-box' with TIDE"
-date:   2026-05-11
+date: 2026-05-11 00:00:00 +0100
 author: Sigea Team
 categories: [Use Case, Enterprise Security, Workflow]
 tags: [CISO, Detection Engineering, Sigma, DaC]
