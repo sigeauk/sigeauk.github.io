@@ -53,12 +53,12 @@ Security engineering shouldn't be managed in isolated silos or static spreadshee
 
 ### Get started today by pulling the image:
 
-**Clone the repository**
+**Clone the repository**  
 `git clone https://github.com/sigeauk/tide.git`
 `cd tide`
 
-**Start <span class="text-accent">TIDE</span>**
+**Start <span class="text-accent">TIDE</span>**  
 `docker compose up --build -d`
 
-### Access the UI
+**Access the UI**   
 Open `http://localhost`
