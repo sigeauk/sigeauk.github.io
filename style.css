@@ -396,8 +396,96 @@ pre {
     text-align: center;
     font-size: 0.9rem;
     margin-top: 10px;
-    color: var(--card-bg);
+    color: var(--text-dim);
 }
+
+.gallery-item a { display: block; }
+
+/* A narrow screenshot (one section, one card) at its own size, not stretched to the column */
+.gallery-item.fit { width: fit-content; max-width: 100%; }
+.gallery-item.fit img { width: auto; max-width: 100%; }
+
+/* Buttons side by side */
+.btn-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+
+/* Two columns of cards, for four */
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+
+/* --- WHY SIGEA (Home page) --- */
+.aegis {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.aegis-mark {
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 0.6rem;
+    line-height: 1.1;
+}
+
+.aegis-mark .word {
+    display: block;
+    font-size: 3.2rem;
+    color: var(--text-dim);
+}
+
+.aegis-mark .word--accent { color: var(--primary-accent); }
+
+.aegis-mark .arrow {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: var(--text-dim);
+    margin: 0.6rem 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .aegis { grid-template-columns: 1fr; }
+}
+
+/* --- SPOTLIGHT (Home page) --- */
+.spotlight {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 2rem;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.spotlight img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .spotlight { grid-template-columns: 1fr; }
+}
+
+/* A small label: a release, or what's coming */
+.pill {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border: 1px solid var(--primary-accent);
+    border-radius: 999px;
+    color: var(--primary-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.feature-card h3 { margin-top: 0; }
+.feature-card ul { padding-left: 1.2rem; margin: 0.5rem 0 0; color: var(--text-dim); }
+.feature-card li { margin: 0.25rem 0; }
 
 
 /* Blog Layout Wrapper */

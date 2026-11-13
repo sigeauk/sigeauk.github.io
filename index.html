@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: Sigea is a cybersecurity firm specializing in Threat Informed Detection Engineering, providing open-source tools to help security teams validate their detection posture.
+description: Sigea builds open-source tools for threat informed detection engineering, starting from what adversaries do and working back to the rules that catch them.
 ---
 
 <div class="hero-container">
@@ -11,25 +11,83 @@ description: Sigea is a cybersecurity firm specializing in Threat Informed Detec
     <div class="hero-text">
         <h2 class="main-heading">SIGEA</h2>
         <p class="accent-subtitle">The Standard in Detection Engineering</p>
-        <p class="lead-text">Sigea is a specialized cybersecurity firm dedicated to Threat Informed Detection Engineering. 
-            We bridge the gap between raw threat intelligence and actionable defense by developing open-source 
-            tools and frameworks that help security teams validate their detection posture.</p>
+        <p class="lead-text">Sigea builds open-source tools for threat informed detection engineering. We start from what
+            adversaries actually do, work back to the rules that would catch them, and then keep checking that those
+            rules still can.</p>
     </div>
 </div>
 
 <div class="grid">
     <div class="feature-card">
         <h3>Transparency</h3>
-        <p>Security tools that are open-source and auditable, ensuring trust and accountability for the modern enterprise.</p>
+        <p>Open source and auditable. Every score, finding and coverage decision shows its working, so you can
+            explain it to an auditor, or to yourself at 3am.</p>
     </div>
 
     <div class="feature-card">
         <h3>Alignment</h3>
-        <p>Defensive measures directly mapped to known adversary behaviors through MITRE ATT&CK® integration.</p>
+        <p>Defences mapped to MITRE ATT&CK®: baselines built from the groups, software and campaigns that target
+            you, not from a generic checklist.</p>
     </div>
 
     <div class="feature-card">
         <h3>Automation</h3>
-        <p>Detection lifecycles programmatic and scalable, drastically reducing the manual burden on SOC analysts.</p>
+        <p>Detection engineering as a lifecycle: find the gap, build the rule, deploy it, watch it work. The
+            tooling does the legwork; a person makes every decision.</p>
     </div>
 </div>
+
+<section class="aegis">
+    <div>
+        <span class="text-accent"><h2>Why SIGEA?</h2></span>
+        <p class="lead-text">Read it backwards.</p>
+        <p class="lead-text"><strong>SIGEA</strong> is <strong>AEGIS</strong> spelled in reverse. In Greek myth the aegis
+            was the shield carried by Zeus and by Athena, goddess of wisdom and strategic warfare. It bore the
+            Gorgon's head, which is the face in our logo, and it is why we still say something happens "under the
+            aegis" of someone: under their protection.</p>
+        <p class="lead-text">Athena never won by charging in. That was Ares' department. She won by knowing what was
+            coming and being ready for it, which is as good a description of detection engineering as we have found.</p>
+        <p class="lead-text">And the backwards spelling? That is how threat informed detection works: start from the
+            adversary's behaviour and work back to the rule that catches it.</p>
+    </div>
+    <div class="aegis-mark" aria-hidden="true">
+        <span class="word word--accent">SIGEA</span>
+        <span class="arrow">read it backwards</span>
+        <span class="word">AEGIS</span>
+    </div>
+</section>
+
+<section class="spotlight">
+    <div>
+        <span class="pill">Latest release 6.4.0</span>
+        <span class="text-accent"><h2>Meet TIDE</h2></span>
+        <p class="lead-text"><strong>TIDE</strong> (Threat Informed Detection Engine) is our open-source platform for
+            the whole detection lifecycle: from the threat actors that matter to you, to the rules in your SIEM, to
+            proof that those rules can still fire. It runs air-gapped, keeps each client apart, and ships with MITRE
+            ATT&CK, SigmaHQ and Elastic's detection rules built in.</p>
+        <p class="lead-text">The latest release teaches Rule Monitoring to notice when the data behind a rule goes
+            quiet, arrives late or never fills the fields it matches, and shows how much of your coverage is
+            <em>effective</em>.</p>
+        <div class="btn-row">
+            <a href="{{ '/tide' | absolute_url }}" class="btn-primary">Explore TIDE</a>
+            <a href="https://github.com/sigeauk/TIDE" class="btn-primary">TIDE on GitHub</a>
+        </div>
+    </div>
+    <a href="{{ site.baseurl }}/images/tide/rule-monitoring.jpg">
+        <img src="{{ site.baseurl }}/images/tide/rule-monitoring.jpg" alt="TIDE's Rule Monitoring, grouping what stops each rule working by its cause">
+    </a>
+</section>
+
+<section class="product-info">
+    <span class="text-accent"><h2>Latest from the blog</h2></span>
+    <div class="grid">
+        {% for post in site.posts limit: 3 %}
+        <article class="blog-card">
+            <header class="blog-card-meta">{{ post.date | date: "%B %d, %Y" }}</header>
+            <h3 class="blog-card-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h3>
+            <p class="blog-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncatewords: 26 }}</p>
+            <a href="{{ post.url | absolute_url }}" class="read-more">Read Article &rarr;</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>

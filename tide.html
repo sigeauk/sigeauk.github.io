@@ -1,149 +1,162 @@
 ---
 layout: default
 title: TIDE
-description: Explore Sigea's flagship product, TIDE—a comprehensive platform for Threat Informed Detection Engineering.
+description: TIDE, Sigea's open-source Threat Informed Detection Engine. See which threats your SIEM rules cover, prove those rules can still fire, and record every gap you accept.
 ---
 
 <div class="hero-container">
     <div class="hero-text">
         <h2 class="main-heading">TIDE</h2>
         <p class="accent-subtitle">Threat Informed Detection Engine</p>
-        <p class="lead-text">A standalone, containerized platform for managing the full Detection Engineering lifecycle from threat intelligence to validated SIEM rules.</p>
+        <p class="lead-text">If an adversary attacked today, would your rules actually catch them? TIDE answers that
+            question per system you defend: which threats your detection rules cover, which of those rules can still
+            work on the data you collect, and who accepted every gap that is left.</p>
+        <p class="lead-text"><span class="pill">Latest release 6.4.0</span> &nbsp;Open source, air-gapped, and two Docker
+            containers to run.</p>
     </div>
 </div>
 
 <section class="product-info">
-    <span class="text-accent"></span><h2>Architecture Overview</h2></span>
-    <p>TIDE utilizes a robust, three-tier architecture designed for air-gapped or enterprise environments:</p>
-
+    <span class="text-accent"><h2>What TIDE does</h2></span>
     <div class="grid">
         <div class="feature-card">
-            <span class="text-accent"><h3>Nginx</h3></span>
-            <p>Handles SSL termination and reverse proxying.</p>
+            <span class="text-accent"><h3>Rule Health</h3></span>
+            <p>Every rule from your SIEMs in one place, scored as a percentage on the checks you choose and weight per
+                client: field mappings checked against your real indexes, investigation guides, MITRE tags, search time
+                and more. Filter, validate, and see each rule's score over time.</p>
         </div>
-
         <div class="feature-card">
-            <span class="text-accent"><h3>FastAPI</h3></span>
-            <p>Powers the core REST API and HTMX dynamic frontend.</p>
+            <span class="text-accent"><h3>Rule Monitoring</h3></span>
+            <p>Kibana says when a rule fails. TIDE says when it quietly can't work:</p>
+            <ul>
+                <li>missing indexes and fields, failed runs, blind windows</li>
+                <li>data gone quiet, fields never filled, events arriving late</li>
+                <li>noisy, silent and spiking rules, slow searches</li>
+                <li>exception sprawl, duplicates, upstream drift</li>
+            </ul>
         </div>
-
         <div class="feature-card">
-            <span class="text-accent"><h3>DuckDB</h3></span>
-            <p>Embedded analytics database for high-performance rule caching.</p>
+            <span class="text-accent"><h3>Effective coverage</h3></span>
+            <p>Systems and baselines show what each environment should detect and what covers it. <strong>Effective</strong>
+                coverage leaves out rules that can't work right now, so a green tick means a rule that can still fire.
+                Known gaps carry a reason, an owner and a review date.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>Threat informed baselines</h3></span>
+            <p>Build a baseline from any ATT&CK group, software or campaign, or from your OpenCTI's intrusion sets, then
+                map rules to each technique. The heatmap and Threat Landscape show how much of each actor's tradecraft
+                your enabled rules carry.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>Sigma and Elastic libraries</h3></span>
+            <p>SigmaHQ and Elastic's detection rules are built in. Filter to what you need, convert and deploy in a
+                click, or make a baseline from the rules you filtered. TIDE tracks where each rule came from and shows
+                you upstream updates to review and merge.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>The rule lifecycle</h3></span>
+            <p>Create and edit query, EQL, ES|QL, threshold, new terms and indicator match rules. Duplicate, move or
+                copy them between SIEM destinations, compare two rules section by section, and see every change in a
+                rule's history, whoever made it and wherever.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>Reports and GitLab</h3></span>
+            <p>Executive and technical system and threat reports in PDF or Markdown, with the health of the rules behind
+                the figures. Back up every rule to GitLab, and raise Rule Monitoring's findings as GitLab issues for the
+                person who fixes them.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>Built for secure networks</h3></span>
+            <p>No internet needed once installed: MITRE ATT&CK, NIST 800-53, SigmaHQ, Elastic's rules and the CISA KEV
+                catalogue ship inside the image. Each client gets its own database, users and roles, with Keycloak
+                single sign-on and an out-of-hours maintenance window.</p>
         </div>
     </div>
 </section>
 
 <section class="product-info">
+    <span class="text-accent"><h2>Platform screenshots</h2></span>
+    <p class="lead-text">A demo client, Olympus Freight, whose detection rules were written by the Olympians. Some of
+        them better than others. Click a screenshot for the full size.</p>
 
-        <span class="text-accent"><h2>Features</h2></span>
-    <p>TIDE offers a range of features designed to streamline the Detection Engineering lifecycle:</p>
-
-    <div class="grid">
-        <div class="feature-card">
-            <span class="text-accent"><h3>Keycloak Integration</h3></span>
-            <p>Seamless integration with Keycloak for authentication and authorization.</p>
+    <div class="gallery-grid">
+        {% assign shots = "rule-health|Rule Health: every rule, scored^rule-monitoring|Rule Monitoring: what stops each rule working, by cause^rule-window|A rule's window: score, alerts, findings, history^system|A system: Covered against Effective coverage^threat-landscape|Threat Landscape: coverage per threat actor^heatmap|Heatmap: two actors against your enabled rules^elastic-library|Elastic's rules, built in, ready to deploy^dashboard|Dashboard: the figures you choose" | split: "^" %}
+        {% for shot in shots %}
+        {% assign parts = shot | split: "|" %}
+        <div class="gallery-item">
+            <a href="{{ site.baseurl }}/images/tide/{{ parts[0] }}.jpg">
+                <img src="{{ site.baseurl }}/images/tide/{{ parts[0] }}.jpg" alt="{{ parts[1] }}" loading="lazy">
+            </a>
+            <p class="caption">{{ parts[1] }}</p>
         </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>MITRE ATT&CK Integration</h3></span>
-            <p>Integration with the MITRE ATT&CK framework for threat intelligence mapping. Built into the core of TIDE for airgapped environments.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>OpenCTI Integration</h3></span>
-            <p>Integration with the OpenCTI platform for threat intelligence management. Pull threat intelligence data directly into TIDE for analysis and threat correlation.</p>
-        </div>
-        
-        <div class="feature-card">
-            <span class="text-accent"><h3>SIEM Integration</h3></span>
-            <p>Pull threat detection rules directly into TIDE from your SIEM for centralized monitoring and response.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>Rule Validation Workflow</h3></span>
-            <p>Comprehensive workflow for validating detection rules, including manual analyst review. Includes promotion of rules based on **Quality** and **Metadata**.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>SIGMA Integration</h3></span>
-            <p>Integration with the SIGMA framework for rule management and background synchronization state. Built into the core of TIDE for airgapped environments.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>SIGMA Conversion</h3></span>
-            <p>Converts SIGMA rules into a format compatible with your SIEM for seamless integration. Deploy from TIDE for instant coverage.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>Coverage Metrics</h3></span>
-            <p>Comprehensive coverage metrics to identify gaps in your detection posture and prioritize rule development.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>Rule logging</h3></span>
-            <p>Log rule score directly back into your SIEM for centralized monitoring and analysis. Allows for real-time insights and auditing of detection rules.</p>
-        </div>
-    </div>
-
-</section>
-
-<section class="product-info">
-    <span class="text-accent"><h2>Data Persistence</h2></span>
-    <p>TIDE is designed for stability. The following files are maintained in your persistent volume to survive container updates:</p>
-
-    <div class="grid">
-        <div class="feature-card">
-            <span class="text-accent"><h3>tide.duckdb</h3></span>
-            <p>The central rule cache and coverage metrics.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>checkedRule.json</h3></span>
-            <p>Manual analyst validation records.</p>
-        </div>
-
-        <div class="feature-card">
-            <span class="text-accent"><h3>triggers/</h3></span>
-            <p>Directory for background synchronization state.</p>
-        </div>
+        {% endfor %}
     </div>
 </section>
 
 <section class="product-info">
-    <span class="text-accent"><h2>Platform Screenshots</h2></span>
-    <p>Explore the TIDE interface and its core analytics capabilities.</p>
+    <span class="text-accent"><h2>Coming in 7.0 <span class="pill">Preview</span></h2></span>
+    <p class="lead-text">Being built now, and subject to change before it ships.</p>
+    <div class="grid grid--2">
+        <div class="feature-card">
+            <span class="text-accent"><h3>Wazuh</h3></span>
+            <p>Wazuh rules and alerts beside your Elastic rules, Wazuh agents as a system's devices with their
+                vulnerabilities, and CIS benchmark hardening shown next to coverage.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>How to detect</h3></span>
+            <p>MITRE ATT&CK's own detection strategy in every technique window: what to look for on each platform, the
+                log sources and events to collect, and what to tune.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>Log sources per system</h3></span>
+            <p>Every log source a system's baseline needs on its platforms, from its devices, ready to hand to whoever
+                runs your logging.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>What needs you today</h3></span>
+            <p>A home page of what needs attention: Rule Monitoring's errors, known gaps due for review, lapsing
+                validations and open issues. Plus Elastic's own rule validator, and mapping rules to techniques by their
+                ATT&CK ids in bulk.</p>
+        </div>
+    </div>
 
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Threat Landscape.jpeg" alt="Threat Landscape Overview">
-            <p class="caption">Threat Landscape</p>
+            <a href="{{ site.baseurl }}/images/tide/tease-home.jpg"><img src="{{ site.baseurl }}/images/tide/tease-home.jpg" alt="The 7.0 home page: what needs attention" loading="lazy"></a>
+            <p class="caption">Home: what needs attention</p>
         </div>
         <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Heatmap.png" alt="MITRE ATT&CK Heatmap">
-            <p class="caption">Coverage Heatmap</p>
+            <a href="{{ site.baseurl }}/images/tide/tease-technique-window.jpg"><img src="{{ site.baseurl }}/images/tide/tease-technique-window.jpg" alt="A technique's window with How to detect" loading="lazy"></a>
+            <p class="caption">How to detect, in a technique's window</p>
         </div>
         <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Sigma.jpeg" alt="Sigma Rule Management">
-            <p class="caption">Sigma Convert & Deploy</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Promotion.jpeg" alt="Rule Promotion Workflow">
-            <p class="caption">Rule Promotion</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/logging.png" alt="Rule Logging and Auditing">
-            <p class="caption">Logging</p>
-        </div>
-        <div class="gallery-item">
-            <img src="{{ site.baseurl }}/images/Health.jpeg" alt="System Health Monitoring">
-            <p class="caption">Rule Health</p>
+            <a href="{{ site.baseurl }}/images/tide/tease-log-sources.png"><img src="{{ site.baseurl }}/images/tide/tease-log-sources.png" alt="A system's Log sources" loading="lazy"></a>
+            <p class="caption">The log sources a system needs</p>
         </div>
     </div>
 </section>
 
-<div class="grid btn-grid">
-    <div class="cta-container">
-      <a href="https://github.com/sigeauk/TIDE" class="btn-primary">Full Documentation on GitHub</a>
-    </div>  
+<section class="product-info">
+    <span class="text-accent"><h2>Architecture</h2></span>
+    <p class="lead-text">Two containers, no external database, nothing fetched at runtime.</p>
+    <div class="grid">
+        <div class="feature-card">
+            <span class="text-accent"><h3>Nginx</h3></span>
+            <p>TLS termination, security headers and static files.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>FastAPI and HTMX</h3></span>
+            <p>Server-rendered pages: fast, auditable and without a heavyweight JavaScript front end.</p>
+        </div>
+        <div class="feature-card">
+            <span class="text-accent"><h3>DuckDB</h3></span>
+            <p>Embedded analytics: reference data built into the image, a control-plane database, and one database per
+                client, all in one data volume you can back up and move.</p>
+        </div>
+    </div>
+</section>
+
+<div class="btn-row">
+    <a href="https://github.com/sigeauk/TIDE" class="btn-primary">TIDE on GitHub</a>
+    <a href="{{ '/blog' | absolute_url }}" class="btn-primary">Read the blog</a>
 </div>
